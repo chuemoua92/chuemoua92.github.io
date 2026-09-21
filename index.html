@@ -1,15 +1,22 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Dragons Of The North | Bearded Dragon Breeder</title>
 
-    <meta name="description" content="Dragons Of The North — quality bearded dragons, genetics, bloodlines and responsible breeding in Minnesota.">
+    <meta
+        name="description"
+        content="Dragons Of The North — quality bearded dragons, genetics, bloodlines and responsible breeding in Minnesota."
+    >
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -22,81 +29,113 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #0b0b0b;
+            background: #090909;
             color: #ffffff;
             line-height: 1.6;
         }
 
-        /* NAVIGATION */
+
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(0, 0, 0, 0.92);
+            background: rgba(5, 5, 5, 0.96);
             border-bottom: 1px solid #292929;
-            padding: 15px 5%;
+            padding: 16px 5%;
         }
 
         .nav-container {
-            max-width: 1200px;
+            max-width: 1250px;
             margin: auto;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: 22px;
-            font-weight: bold;
             color: #ffffff;
             text-decoration: none;
+
+            font-size: 21px;
+            font-weight: bold;
+
+            letter-spacing: 1px;
         }
 
         .logo span {
-            color: #b51f24;
+            color: #c92329;
         }
 
         nav ul {
-            display: flex;
             list-style: none;
-            gap: 25px;
+
+            display: flex;
+
+            gap: 24px;
         }
 
-        nav a {
+        nav ul li a {
             color: #ffffff;
             text-decoration: none;
+
             font-size: 14px;
-            transition: 0.3s;
+
+            transition: .3s;
         }
 
-        nav a:hover {
+        nav ul li a:hover {
             color: #d62b31;
         }
 
-        /* HERO */
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
+
             min-height: 100vh;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             text-align: center;
-            padding: 120px 20px 80px;
+
+            padding: 140px 20px 90px;
+
             background:
-                linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.85)),
-                radial-gradient(circle at center, #3b1113 0%, #0b0b0b 65%);
+                linear-gradient(
+                    rgba(0,0,0,.78),
+                    rgba(0,0,0,.92)
+                ),
+                radial-gradient(
+                    circle at center,
+                    #421316 0%,
+                    #090909 70%
+                );
         }
 
         .hero-content {
-            max-width: 900px;
+            max-width: 950px;
         }
 
         .hero h1 {
+
             font-size: clamp(45px, 8vw, 90px);
-            letter-spacing: 3px;
-            margin-bottom: 15px;
+
+            letter-spacing: 4px;
+
+            line-height: 1.1;
+
+            margin-bottom: 25px;
+
             text-transform: uppercase;
         }
 
@@ -105,398 +144,549 @@
         }
 
         .hero p {
-            font-size: 21px;
-            color: #dddddd;
-            max-width: 700px;
-            margin: 0 auto 35px;
+
+            max-width: 750px;
+
+            margin: auto;
+
+            color: #d0d0d0;
+
+            font-size: 20px;
         }
 
         .buttons {
+
+            margin-top: 35px;
+
             display: flex;
+
             justify-content: center;
+
             gap: 15px;
+
             flex-wrap: wrap;
         }
 
         .button {
+
             display: inline-block;
+
             padding: 14px 28px;
+
             border-radius: 5px;
+
             text-decoration: none;
+
             font-weight: bold;
+
             transition: .3s;
         }
 
         .button-primary {
+
             background: #b51f24;
-            color: white;
+
+            color: #ffffff;
         }
 
         .button-primary:hover {
+
             background: #d62b31;
+
             transform: translateY(-2px);
         }
 
         .button-secondary {
-            border: 1px solid #777;
-            color: white;
+
+            border: 1px solid #777777;
+
+            color: #ffffff;
         }
 
         .button-secondary:hover {
+
             border-color: #c92329;
+
             color: #c92329;
         }
 
-        /* GENERAL SECTIONS */
+
+        /* =========================
+           GENERAL
+        ========================= */
 
         section {
             padding: 90px 20px;
         }
 
         .container {
+
             max-width: 1200px;
+
             margin: auto;
         }
 
         .section-title {
+
             text-align: center;
+
             margin-bottom: 50px;
         }
 
         .section-title h2 {
-            font-size: 38px;
-            margin-bottom: 10px;
+
+            font-size: 40px;
+
+            margin-bottom: 12px;
         }
 
         .section-title p {
-            color: #aaa;
-            max-width: 700px;
+
+            max-width: 750px;
+
             margin: auto;
+
+            color: #999999;
         }
 
-        /* STORY */
+
+        /* =========================
+           STORY
+        ========================= */
 
         .story {
+
             background: #111111;
         }
 
         .story-content {
+
             max-width: 850px;
+
             margin: auto;
+
             text-align: center;
         }
 
         .story-content p {
+
             color: #cccccc;
+
             font-size: 18px;
+
             margin-bottom: 20px;
         }
 
-        /* FOCUS CARDS */
+
+        /* =========================
+           FOCUS CARDS
+        ========================= */
 
         .cards {
+
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 22px;
         }
 
         .card {
+
             background: #151515;
+
             border: 1px solid #292929;
-            padding: 30px 22px;
+
+            padding: 32px 22px;
+
             border-radius: 8px;
+
             text-align: center;
+
             transition: .3s;
         }
 
         .card:hover {
+
             transform: translateY(-5px);
+
             border-color: #b51f24;
         }
 
         .card-icon {
-            font-size: 40px;
+
+            font-size: 42px;
+
             margin-bottom: 15px;
         }
 
         .card h3 {
+
             margin-bottom: 10px;
         }
 
         .card p {
-            color: #aaa;
+
+            color: #aaaaaa;
+
             font-size: 15px;
         }
 
-        /* GENETICS */
+
+        /* =========================
+           AVAILABLE DRAGONS
+        ========================= */
+
+        .available {
+
+            background: #0d0d0d;
+        }
+
+        .available-box {
+
+            max-width: 950px;
+
+            margin: auto;
+
+            background: #151515;
+
+            border: 1px solid #292929;
+
+            border-radius: 10px;
+
+            padding: 60px 30px;
+
+            text-align: center;
+        }
+
+        .available-box h3 {
+
+            font-size: 30px;
+
+            margin-bottom: 15px;
+        }
+
+        .available-box p {
+
+            max-width: 700px;
+
+            margin: auto;
+
+            color: #999999;
+        }
+
+
+        /* =========================
+           GENETICS
+        ========================= */
 
         .genetics {
+
             background:
-                linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.9)),
-                radial-gradient(circle at center, #351012, #0b0b0b 70%);
-            text-align: center;
+                linear-gradient(
+                    rgba(0,0,0,.82),
+                    rgba(0,0,0,.94)
+                ),
+                radial-gradient(
+                    circle at center,
+                    #391113,
+                    #090909 70%
+                );
         }
 
         .genetics-list {
+
             display: flex;
+
             justify-content: center;
+
             flex-wrap: wrap;
-            gap: 12px;
-            margin: 30px 0;
+
+            gap: 15px;
+
+            margin-bottom: 35px;
         }
 
-        .genetics-list span {
-            border: 1px solid #444;
-            padding: 12px 20px;
+        .genetics-list span,
+        .genetics-list a {
+
+            padding: 14px 22px;
+
             border-radius: 30px;
+
             background: #151515;
+
+            border: 1px solid #444444;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            transition: .3s;
         }
 
-        /* FEATURED */
+        .genetics-list a {
 
-        .featured {
-            background: #0b0b0b;
+            border-color: #b51f24;
+
+            font-weight: bold;
         }
 
-        .featured-box {
-            border: 1px solid #292929;
-            background: #121212;
-            padding: 50px;
+        .genetics-list a:hover {
+
+            background: #b51f24;
+
+            transform: translateY(-2px);
+        }
+
+        .genetics-list span:hover {
+
+            border-color: #777777;
+        }
+
+
+        /* =========================
+           BLOODLINE MESSAGE
+        ========================= */
+
+        .bloodline-message {
+
             text-align: center;
-            border-radius: 10px;
+
+            color: #888888;
+
+            max-width: 700px;
+
+            margin: auto;
         }
 
-        .featured-box p {
-            color: #aaa;
-            margin-bottom: 25px;
-        }
 
-        /* CTA */
+        /* =========================
+           FACEBOOK CTA
+        ========================= */
 
         .cta {
+
             background: #b51f24;
+
             text-align: center;
         }
 
         .cta h2 {
+
             font-size: 42px;
+
             margin-bottom: 15px;
         }
 
         .cta p {
+
             font-size: 18px;
+
             margin-bottom: 25px;
         }
 
         .cta .button {
+
             background: #ffffff;
+
             color: #111111;
         }
 
-        /* FOOTER */
+        .cta .button:hover {
+
+            background: #eeeeee;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
+
             background: #050505;
+
+            border-top: 1px solid #222222;
+
             text-align: center;
-            padding: 35px 20px;
-            color: #888;
+
+            padding: 40px 20px;
+
+            color: #777777;
         }
 
         footer strong {
+
             color: #ffffff;
         }
 
-        /* MOBILE */
 
-        @media (max-width: 900px) {
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 950px) {
+
             .cards {
-                grid-template-columns: repeat(2, 1fr);
+
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
             nav ul {
-                gap: 12px;
+
+                gap: 14px;
             }
         }
 
-        @media (max-width: 650px) {
+
+        @media (max-width: 700px) {
+
             nav {
+
                 position: relative;
             }
 
             .nav-container {
+
                 flex-direction: column;
-                gap: 12px;
+
+                gap: 15px;
             }
 
             nav ul {
-                flex-wrap: wrap;
+
                 justify-content: center;
+
+                flex-wrap: wrap;
+
+                gap: 12px;
             }
 
             .hero {
+
                 min-height: 85vh;
+
+                padding-top: 80px;
             }
 
             .hero p {
+
                 font-size: 17px;
             }
 
             .cards {
+
                 grid-template-columns: 1fr;
             }
 
             section {
+
                 padding: 65px 18px;
             }
 
-            .featured-box {
-                padding: 30px 20px;
+            .section-title h2 {
+
+                font-size: 32px;
+            }
+
+            .available-box {
+
+                padding: 40px 20px;
             }
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
+
     <div class="nav-container">
 
-        <a href="#" class="logo">
+        <a href="index.html" class="logo">
             DRAGONS <span>OF THE NORTH</span>
         </a>
 
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#dragons">Available Dragons</a></li>
-           ```html
-<!-- ZERO BLOODLINE -->
 
-<section class="genetics" id="genetics">
+            <li>
+                <a href="#home">Home</a>
+            </li>
 
-    <div class="container">
+            <li>
+                <a href="#dragons">Available Dragons</a>
+            </li>
 
-        <div class="section-title">
+            <li>
+                <a href="#genetics">Genetics</a>
+            </li>
 
-            <h2>🧬 Our Zero Bloodline</h2>
+            <li>
+                <a href="#story">Our Story</a>
+            </li>
 
-            <p>
-                Our Zero project begins with carefully selected genetics
-                and a focus on producing healthy, quality dragons.
-            </p>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
 
-        </div>
-
-
-        <div style="
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            max-width: 900px;
-            margin: 0 auto 40px;
-        ">
-
-            <!-- MIKEY -->
-
-            <div class="card">
-
-                <img
-                    src="Mikey.jpg"
-                    alt="Mikey - Zero Bloodline Parent"
-                    style="
-                        width: 100%;
-                        height: 400px;
-                        object-fit: cover;
-                        border-radius: 6px;
-                        margin-bottom: 20px;
-                    "
-                >
-
-                <h3>🐉 Mikey</h3>
-
-                <p>
-                    <strong>Zero Bloodline Parent</strong>
-                </p>
-
-            </div>
-
-
-            <!-- MINNIE -->
-
-            <div class="card">
-
-                <img
-                    src="Minnie.jpg"
-                    alt="Minnie - Zero Bloodline Parent"
-                    style="
-                        width: 100%;
-                        height: 400px;
-                        object-fit: cover;
-                        border-radius: 6px;
-                        margin-bottom: 20px;
-                    "
-                >
-
-                <h3>🐉 Minnie</h3>
-
-                <p>
-                    <strong>Zero Bloodline Parent</strong>
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="genetics-list">
-
-            <span>Zero</span>
-            <span>Red Monster</span>
-            <span>Hypo</span>
-            <span>Trans</span>
-            <span>Witblits</span>
-            <span>Dark Series</span>
-
-        </div>
-
-    </div>
-
-</section>
-```
-
-            <li><a href="#story">Our Story</a></li>
-            <li><a href="#contact">Contact</a></li>
         </ul>
 
     </div>
+
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero" id="home">
 
     <div class="hero-content">
 
         <h1>
-            DRAGONS <span>OF THE NORTH</span>
+            DRAGONS
+            <span>OF THE NORTH</span>
         </h1>
 
         <p>
-            Quality bearded dragons. Strong genetics. Responsible breeding.
-            Raising exceptional dragons with health, structure, personality
-            and genetics in mind.
+
+            Quality bearded dragons.
+            Strong genetics.
+            Responsible breeding.
+
+            Raising healthy, quality dragons with
+            genetics, structure and personality in mind.
+
         </p>
 
         <div class="buttons">
 
-            <a href="#dragons" class="button button-primary">
+            <a
+                href="#dragons"
+                class="button button-primary"
+            >
                 🐉 View Available Dragons
             </a>
 
-            <a href="#genetics" class="button button-secondary">
-                🧬 Explore Our Genetics
+            <a
+                href="#genetics"
+                class="button button-secondary"
+            >
+                🧬 Explore Genetics
             </a>
 
         </div>
@@ -506,29 +696,43 @@
 </section>
 
 
-<!-- OUR STORY -->
+<!-- =========================
+     OUR STORY
+========================= -->
 
 <section class="story" id="story">
 
     <div class="container">
 
         <div class="section-title">
+
             <h2>Our Story</h2>
-            <p>From one dragon to a growing passion.</p>
+
+            <p>
+                From one dragon to a growing passion.
+            </p>
+
         </div>
+
 
         <div class="story-content">
 
             <p>
-                Dragons Of The North started with a simple love for bearded
-                dragons and grew into a passion for responsible breeding,
-                genetics and producing healthy, quality animals.
+
+                Dragons Of The North started with a simple
+                love for bearded dragons and grew into a passion
+                for genetics, responsible breeding and producing
+                healthy, quality animals.
+
             </p>
 
             <p>
-                Our goal is more than producing beautiful dragons. We focus
-                on proper care, thoughtful pairings and giving every dragon
-                the best possible start before finding the right home.
+
+                Our goal is more than producing beautiful dragons.
+                We focus on proper care, thoughtful pairings and
+                giving every dragon the best possible start before
+                finding the right home.
+
             </p>
 
         </div>
@@ -538,7 +742,9 @@
 </section>
 
 
-<!-- WHAT WE FOCUS ON -->
+<!-- =========================
+     WHAT WE FOCUS ON
+========================= -->
 
 <section>
 
@@ -549,8 +755,7 @@
             <h2>What We Focus On</h2>
 
             <p>
-                Our breeding program is built around health, quality,
-                genetics and responsible placement.
+                Health, genetics, quality and responsible breeding.
             </p>
 
         </div>
@@ -558,15 +763,21 @@
 
         <div class="cards">
 
+
             <div class="card">
 
-                <div class="card-icon">🧬</div>
+                <div class="card-icon">
+                    🧬
+                </div>
 
-                <h3>Quality Genetics</h3>
+                <h3>
+                    Quality Genetics
+                </h3>
 
                 <p>
-                    Carefully selected bloodlines and breeding projects
-                    focused on producing quality offspring.
+                    Carefully selected bloodlines and
+                    breeding projects focused on quality
+                    offspring.
                 </p>
 
             </div>
@@ -574,13 +785,18 @@
 
             <div class="card">
 
-                <div class="card-icon">❤️</div>
+                <div class="card-icon">
+                    ❤️
+                </div>
 
-                <h3>Health First</h3>
+                <h3>
+                    Health First
+                </h3>
 
                 <p>
-                    Proper nutrition, UVB, heat, husbandry and daily care
-                    are the foundation of our program.
+                    Proper nutrition, UVB, heat,
+                    husbandry and daily care are the
+                    foundation of our program.
                 </p>
 
             </div>
@@ -588,13 +804,18 @@
 
             <div class="card">
 
-                <div class="card-icon">🐉</div>
+                <div class="card-icon">
+                    🐉
+                </div>
 
-                <h3>Exceptional Dragons</h3>
+                <h3>
+                    Exceptional Dragons
+                </h3>
 
                 <p>
-                    We strive for strong structure, color, genetics and
-                    great personalities.
+                    We strive for strong structure,
+                    color, genetics and great
+                    personalities.
                 </p>
 
             </div>
@@ -602,16 +823,22 @@
 
             <div class="card">
 
-                <div class="card-icon">🏡</div>
+                <div class="card-icon">
+                    🏡
+                </div>
 
-                <h3>Right Homes</h3>
+                <h3>
+                    Right Homes
+                </h3>
 
                 <p>
-                    Every dragon deserves a home prepared to provide the
-                    care and commitment they need.
+                    Every dragon deserves a home
+                    prepared to provide the care and
+                    commitment they need.
                 </p>
 
             </div>
+
 
         </div>
 
@@ -620,34 +847,50 @@
 </section>
 
 
-<!-- AVAILABLE DRAGONS -->
+<!-- =========================
+     AVAILABLE DRAGONS
+========================= -->
 
-<section class="featured" id="dragons">
+<section
+    class="available"
+    id="dragons"
+>
 
     <div class="container">
 
         <div class="section-title">
 
-            <h2>🐲 Available Dragons</h2>
+            <h2>
+                🐲 Available Dragons
+            </h2>
 
             <p>
-                Our current dragons will be featured here as they become
-                available.
+                Find your next Dragons Of The North companion.
             </p>
 
         </div>
 
 
-        <div class="featured-box">
+        <div class="available-box">
 
-            <h3>Our next available dragons are coming soon.</h3>
+            <h3>
+                Our Available Dragons
+            </h3>
 
             <p>
-                Check back for current babies, genetics, photos,
-                pricing and individual dragon profiles.
+
+                This section will feature our current
+                available dragons with individual profiles,
+                photos, sex, date of birth, genetics,
+                lineage and pricing.
+
             </p>
 
-            <a href="#contact" class="button button-primary">
+
+            <a
+                href="#contact"
+                class="button button-primary"
+            >
                 Contact Us
             </a>
 
@@ -658,19 +901,28 @@
 </section>
 
 
-<!-- GENETICS -->
+<!-- =========================
+     GENETICS & BLOODLINES
+========================= -->
 
-<section class="genetics" id="genetics">
+<section
+    class="genetics"
+    id="genetics"
+>
 
     <div class="container">
 
         <div class="section-title">
 
-            <h2>🧬 Genetics & Bloodlines</h2>
+            <h2>
+                🧬 Genetics & Bloodlines
+            </h2>
 
             <p>
-                Explore the genetics and breeding projects behind
-                Dragons Of The North.
+
+                Explore the genetics and breeding projects
+                behind Dragons Of The North.
+
             </p>
 
         </div>
@@ -678,40 +930,88 @@
 
         <div class="genetics-list">
 
-            <span>Red Monster</span>
-            <span>Zero</span>
-            <span>Hypo</span>
-            <span>Trans</span>
-            <span>Witblits</span>
-            <span>Dark Series</span>
+
+            <!-- ZERO -->
+
+            <a href="zero.html">
+
+                🧬 Zero
+
+            </a>
+
+
+            <!-- FUTURE BLOODLINE PAGES -->
+
+            <span>
+                🔥 Red Monster
+            </span>
+
+            <span>
+                🌑 Dark Series
+            </span>
+
+            <span>
+                ✨ Hypo
+            </span>
+
+            <span>
+                🧬 Trans
+            </span>
+
+            <span>
+                ⚪ Witblits
+            </span>
+
 
         </div>
 
 
-        <a href="#contact" class="button button-secondary">
-            Learn More
-        </a>
+        <p class="bloodline-message">
+
+            Select a bloodline to explore its breeding
+            project, genetics and available offspring.
+
+            More bloodline pages coming soon.
+
+        </p>
 
     </div>
 
 </section>
 
 
-<!-- CALL TO ACTION -->
+<!-- =========================
+     CONTACT / FACEBOOK
+========================= -->
 
-<section class="cta" id="contact">
+<section
+    class="cta"
+    id="contact"
+>
 
     <div class="container">
 
-        <h2>Looking For Your Next Dragon?</h2>
+        <h2>
+            Looking For Your Next Dragon?
+        </h2>
 
         <p>
-            Follow Dragons Of The North for available dragons,
-            upcoming clutches and breeding updates.
+
+            Follow Dragons Of The North for available
+            dragons, upcoming clutches and breeding updates.
+
         </p>
 
-        <a href="https://www.facebook.com/profile.php?id=61579598882265" class="button" target="_blank">
-            📱 Follow Us On Facebook
+
+        <a
+            href="https://www.facebook.com/profile.php?id=61579598882265"
+            class="button"
+            target="_blank"
+            rel="noopener"
+        >
+
+            📱 Follow Dragons Of The North
+
         </a>
 
     </div>
@@ -719,12 +1019,18 @@
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
     <p>
-        <strong>Dragons Of The North</strong>
+
+        <strong>
+            Dragons Of The North
+        </strong>
+
     </p>
 
     <p>
@@ -732,11 +1038,14 @@
     </p>
 
     <p>
-        © 2026 Dragons Of The North. All rights reserved.
+        © 2026 Dragons Of The North.
+        All rights reserved.
     </p>
 
 </footer>
 
+
 </body>
+
 </html>
 ```
