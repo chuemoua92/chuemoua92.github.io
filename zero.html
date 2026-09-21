@@ -1,1105 +1,665 @@
+```html
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
-<title>Zero Bloodline | Dragons Of The North</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Zero Bloodline - Dragons Of The North">
+    <title>Zero Bloodline | Dragons Of The North</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta
+        name="description"
+        content="Zero Bloodline - Dragons Of The North"
+    >
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-<style>
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
-    html {
-        scroll-behavior: smooth;
-    }
+    <style>
 
-    body {
-        font-family: "Cormorant Garamond", Georgia, serif;
-        background: #080808;
-        color: #f1eee8;
-        line-height: 1.7;
-    }
-
-    h1, h2, h3, nav, .logo, .button {
-        font-family: "Cinzel", Georgia, serif;
-    }
-
-    /* =========================
-       NAVIGATION
-    ========================= */
-
-    nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-
-        background: rgba(5,5,5,0.96);
-
-        border-bottom: 1px solid #493b2b;
-
-        box-shadow: 0 4px 20px rgba(0,0,0,0.7);
-    }
-
-    .nav-container {
-        max-width: 1250px;
-        margin: auto;
-        padding: 10px 25px;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .logo {
-        display: flex;
-        align-items: center;
-        gap: 11px;
-
-        color: white;
-        text-decoration: none;
-
-        font-size: 1rem;
-        font-weight: 700;
-
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-    }
-
-    .logo img {
-        height: 48px;
-        width: auto;
-        object-fit: contain;
-        border-radius: 4px;
-    }
-
-    .logo span {
-        color: white;
-    }
-
-    .nav-links {
-        display: flex;
-        gap: 28px;
-        list-style: none;
-    }
-
-    .nav-links a {
-        color: #d8d0c3;
-        text-decoration: none;
-
-        font-size: 0.82rem;
-        letter-spacing: 1px;
-
-        transition: 0.3s;
-    }
-
-    .nav-links a:hover {
-        color: #c92329;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-
-        min-height: 100vh;
-
-        position: relative;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        text-align: center;
-
-        padding: 130px 20px 90px;
-
-        overflow: hidden;
-
-        /*
-         * KASPER BACKGROUND
-         */
-        background-image:
-            linear-gradient(
-                rgba(0,0,0,0.55),
-                rgba(0,0,0,0.82)
-            ),
-            url("Kasper.jpg");
-
-        background-size: cover;
-
-        background-position: center center;
-
-        background-repeat: no-repeat;
-    }
-
-    .hero::after {
-        content: "";
-
-        position: absolute;
-
-        inset: 0;
-
-        background:
-            radial-gradient(
-                ellipse at center,
-                transparent 15%,
-                rgba(0,0,0,0.15) 45%,
-                rgba(0,0,0,0.85) 100%
-            );
-
-        pointer-events: none;
-    }
-
-    .hero-content {
-        position: relative;
-
-        z-index: 2;
-
-        max-width: 900px;
-    }
-
-    .kicker {
-        color: #b9965a;
-
-        font-family: "Cinzel", Georgia, serif;
-
-        font-size: 0.85rem;
-
-        letter-spacing: 6px;
-
-        text-transform: uppercase;
-
-        margin-bottom: 20px;
-
-        text-shadow: 0 2px 10px black;
-    }
-
-    .hero h1 {
-        font-size: clamp(3.5rem, 9vw, 7rem);
-
-        line-height: 0.9;
-
-        font-weight: 800;
-
-        letter-spacing: 6px;
-
-        text-transform: uppercase;
-
-        text-shadow:
-            0 5px 15px black,
-            0 10px 40px black;
-    }
-
-    .hero h1 span {
-        display: block;
-
-        color: #c92329;
-
-        font-size: 0.5em;
-
-        letter-spacing: 8px;
-
-        margin-top: 18px;
-
-        text-shadow:
-            0 0 15px black,
-            0 0 25px rgba(201,35,41,0.6);
-    }
-
-    .divider {
-        width: 180px;
-        height: 1px;
-
-        background:
-            linear-gradient(
-                90deg,
-                transparent,
-                #b9965a,
-                transparent
-            );
-
-        margin: 30px auto;
-    }
-
-    .hero p {
-        max-width: 700px;
-
-        margin: 0 auto 30px;
-
-        color: #eee8df;
-
-        font-size: 1.3rem;
-
-        text-shadow: 0 2px 10px black;
-    }
-
-    /* =========================
-       BUTTONS
-    ========================= */
-
-    .button {
-        display: inline-block;
-
-        padding: 13px 28px;
-
-        margin: 5px;
-
-        text-decoration: none;
-
-        font-size: 0.82rem;
-
-        font-weight: 600;
-
-        letter-spacing: 1px;
-
-        text-transform: uppercase;
-
-        transition: 0.3s;
-    }
-
-    .red-button {
-        color: white;
-
-        background:
-            linear-gradient(
-                135deg,
-                #751317,
-                #c92329,
-                #741317
-            );
-
-        border: 1px solid #d94a4f;
-
-        box-shadow: 0 5px 20px rgba(0,0,0,0.7);
-    }
-
-    .red-button:hover {
-        transform: translateY(-3px);
-
-        box-shadow:
-            0 8px 25px rgba(201,35,41,0.4);
-    }
-
-    .outline-button {
-        color: #e2d6c5;
-
-        border: 1px solid #806d50;
-
-        background: rgba(0,0,0,0.55);
-    }
-
-    .outline-button:hover {
-        background: #806d50;
-        color: #080808;
-    }
-
-    /* =========================
-       SECTIONS
-    ========================= */
-
-    section {
-        padding: 100px 20px;
-    }
-
-    .container {
-        max-width: 1150px;
-        margin: auto;
-    }
-
-    .section-title {
-        text-align: center;
-        margin-bottom: 50px;
-    }
-
-    .section-title h2 {
-        font-size: 2.6rem;
-
-        letter-spacing: 2px;
-
-        text-transform: uppercase;
-    }
-
-    .section-title h2::after {
-        content: "";
-
-        display: block;
-
-        width: 100px;
-        height: 1px;
-
-        margin: 18px auto;
-
-        background:
-            linear-gradient(
-                90deg,
-                transparent,
-                #9b7844,
-                transparent
-            );
-    }
-
-    .section-title p {
-        color: #aaa196;
-
-        max-width: 700px;
-
-        margin: auto;
-
-        font-size: 1.15rem;
-    }
-
-    /* =========================
-       KASPER FEATURE
-    ========================= */
-
-    .featured {
-        background:
-            linear-gradient(
-                180deg,
-                #080808,
-                #120c0a,
-                #080808
-            );
-
-        border-bottom: 1px solid #30261e;
-    }
-
-    .featured-grid {
-        max-width: 1050px;
-
-        margin: auto;
-
-        display: grid;
-
-        grid-template-columns: 1fr 1fr;
-
-        gap: 55px;
-
-        align-items: center;
-    }
-
-    .photo-frame {
-        padding: 8px;
-
-        border: 1px solid #9b7844;
-
-        background: #080808;
-
-        box-shadow:
-            0 20px 50px rgba(0,0,0,0.7);
-    }
-
-    .photo-frame img {
-        width: 100%;
-
-        display: block;
-
-        aspect-ratio: 4 / 5;
-
-        object-fit: cover;
-    }
-
-    .featured-info .label {
-        color: #b9965a;
-
-        font-family: "Cinzel", Georgia, serif;
-
-        font-size: 0.8rem;
-
-        letter-spacing: 4px;
-
-        text-transform: uppercase;
-
-        margin-bottom: 10px;
-    }
-
-    .featured-info h2 {
-        font-size: 3rem;
-
-        letter-spacing: 3px;
-
-        margin-bottom: 20px;
-    }
-
-    .featured-info h2 span {
-        color: #c92329;
-    }
-
-    .featured-info p {
-        color: #bbb3a8;
-
-        font-size: 1.15rem;
-
-        margin-bottom: 18px;
-    }
-
-    /* =========================
-       PARENTS
-    ========================= */
-
-    .lineage {
-
-        background:
-            linear-gradient(
-                rgba(8,8,8,0.92),
-                rgba(15,9,8,0.96)
-            ),
-            url("Kasper.jpg");
-
-        background-size: cover;
-
-        background-position: center;
-
-        background-attachment: fixed;
-    }
-
-    .lineage-intro {
-        max-width: 800px;
-
-        margin: 0 auto 45px;
-
-        text-align: center;
-
-        color: #bdb5aa;
-
-        font-size: 1.18rem;
-    }
-
-    .parents {
-        max-width: 850px;
-
-        margin: auto;
-
-        display: grid;
-
-        grid-template-columns: 1fr 1fr;
-
-        gap: 30px;
-    }
-
-    .parent {
-        padding: 18px;
-
-        text-align: center;
-
-        background:
-            linear-gradient(
-                145deg,
-                rgba(23,19,17,0.97),
-                rgba(7,7,7,0.98)
-            );
-
-        border: 1px solid #49372b;
-
-        box-shadow:
-            0 15px 35px rgba(0,0,0,0.6);
-    }
-
-    .parent img {
-        width: 100%;
-
-        aspect-ratio: 1 / 1;
-
-        object-fit: cover;
-
-        display: block;
-
-        margin-bottom: 20px;
-    }
-
-    .parent .role {
-        color: #b9965a;
-
-        font-family: "Cinzel", Georgia, serif;
-
-        font-size: 0.7rem;
-
-        letter-spacing: 3px;
-
-        text-transform: uppercase;
-    }
-
-    .parent h3 {
-        font-size: 1.8rem;
-
-        letter-spacing: 2px;
-
-        margin: 7px 0;
-    }
-
-    .parent p {
-        color: #948c83;
-    }
-
-    /* =========================
-       PROJECT
-    ========================= */
-
-    .project {
-        background:
-            radial-gradient(
-                ellipse at center,
-                #25100e,
-                #080808 72%
-            );
-    }
-
-    .project-box {
-        max-width: 900px;
-
-        margin: auto;
-
-        padding: 55px 40px;
-
-        text-align: center;
-
-        background:
-            linear-gradient(
-                145deg,
-                rgba(31,22,18,0.95),
-                rgba(8,8,8,0.98)
-            );
-
-        border: 1px solid #49372b;
-    }
-
-    .project-box h2 {
-        font-size: 2.2rem;
-
-        letter-spacing: 2px;
-
-        margin-bottom: 20px;
-    }
-
-    .project-box p {
-        color: #b5ada3;
-
-        font-size: 1.15rem;
-
-        margin-bottom: 15px;
-    }
-
-    /* =========================
-       AVAILABLE
-    ========================= */
-
-    .available {
-        text-align: center;
-
-        background:
-            linear-gradient(
-                rgba(5,5,5,0.90),
-                rgba(5,5,5,0.96)
-            ),
-            url("Kasper.jpg");
-
-        background-size: cover;
-
-        background-position: center;
-    }
-
-    .available-box {
-        max-width: 850px;
-
-        margin: auto;
-
-        padding: 55px 30px;
-
-        background: rgba(8,8,8,0.88);
-
-        border: 1px solid #49372b;
-    }
-
-    .available-box h3 {
-        font-size: 2rem;
-
-        letter-spacing: 2px;
-
-        margin-bottom: 15px;
-    }
-
-    .available-box p {
-        color: #aaa39a;
-
-        font-size: 1.1rem;
-
-        margin-bottom: 25px;
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-        padding: 35px 20px;
-
-        text-align: center;
-
-        background: #040404;
-
-        border-top: 1px solid #30261f;
-    }
-
-    footer p {
-        color: #6f6a64;
-
-        font-size: 0.9rem;
-
-        margin: 4px;
-    }
-
-    footer p:last-child {
-        color: #806d50;
-
-        font-family: "Cinzel", Georgia, serif;
-
-        font-size: 0.7rem;
-
-        letter-spacing: 2px;
-    }
-
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media (max-width: 800px) {
-
-        .nav-links {
-            display: none;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .featured-grid {
-            grid-template-columns: 1fr;
+        html {
+            scroll-behavior: smooth;
         }
 
-        .featured-info {
-            text-align: center;
+        body {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            background: #080808;
+            color: #f1eee8;
+            line-height: 1.7;
         }
 
-        .parents {
-            grid-template-columns: 1fr;
+        h1,
+        h2,
+        h3,
+        nav,
+        .logo,
+        .button {
+            font-family: "Cinzel", Georgia, serif;
         }
-    }
 
-    @media (max-width: 600px) {
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(5,5,5,0.96);
+
+            border-bottom: 1px solid #493b2b;
+
+            box-shadow:
+                0 4px 20px rgba(0,0,0,0.7);
+        }
 
         .nav-container {
-            padding: 9px 14px;
+            max-width: 1250px;
+            margin: auto;
+
+            padding: 10px 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         .logo {
-            font-size: 0.72rem;
-            gap: 7px;
+            display: flex;
+            align-items: center;
+
+            gap: 11px;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 1rem;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
         }
 
         .logo img {
-            height: 36px;
+            height: 48px;
+            width: auto;
+
+            object-fit: contain;
+
+            border-radius: 4px;
         }
 
+        .logo span {
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+
+            gap: 28px;
+
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #d8d0c3;
+
+            text-decoration: none;
+
+            font-size: 0.82rem;
+
+            letter-spacing: 1px;
+
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #c92329;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
         .hero {
-            min-height: 90vh;
+
+            min-height: 100vh;
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 130px 20px 90px;
+
+            overflow: hidden;
+
+
+            /*
+             * KASPER REMAINS IN THE
+             * BACKGROUND ONLY.
+             *
+             * He is intentionally NOT
+             * spotlighted here.
+             */
+
+            background-image:
+
+                linear-gradient(
+                    rgba(0,0,0,0.68),
+                    rgba(0,0,0,0.88)
+                ),
+
+                url("Kasper.jpg");
+
+            background-size: cover;
+
+            background-position: center center;
+
+            background-repeat: no-repeat;
+        }
+
+
+        /*
+         * Dark fantasy vignette.
+         *
+         * This keeps Kasper visible
+         * in the background without
+         * making him the focal point.
+         */
+
+        .hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                radial-gradient(
+                    ellipse at center,
+                    rgba(0,0,0,0.05) 0%,
+                    rgba(0,0,0,0.25) 45%,
+                    rgba(0,0,0,0.90) 100%
+                );
+
+            pointer-events: none;
+        }
+
+        .hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 900px;
+        }
+
+        .kicker {
+
+            color: #b9965a;
+
+            font-family: "Cinzel", Georgia, serif;
+
+            font-size: 0.85rem;
+
+            letter-spacing: 6px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+
+            text-shadow:
+                0 2px 10px black;
         }
 
         .hero h1 {
-            font-size: 3.2rem;
-            letter-spacing: 3px;
+
+            font-size:
+                clamp(3.5rem, 9vw, 7rem);
+
+            line-height: 0.9;
+
+            font-weight: 800;
+
+            letter-spacing: 6px;
+
+            text-transform: uppercase;
+
+            text-shadow:
+
+                0 5px 15px black,
+
+                0 10px 40px black;
         }
 
         .hero h1 span {
-            letter-spacing: 4px;
+
+            display: block;
+
+            color: #c92329;
+
+            font-size: 0.5em;
+
+            letter-spacing: 8px;
+
+            margin-top: 18px;
+
+            text-shadow:
+
+                0 0 15px black,
+
+                0 0 25px
+                rgba(201,35,41,0.6);
+        }
+
+        .divider {
+
+            width: 180px;
+
+            height: 1px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    #b9965a,
+                    transparent
+                );
+
+            margin: 30px auto;
         }
 
         .hero p {
-            font-size: 1.1rem;
+
+            max-width: 700px;
+
+            margin: 0 auto 30px;
+
+            color: #eee8df;
+
+            font-size: 1.3rem;
+
+            text-shadow:
+                0 2px 10px black;
         }
 
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .button {
+
+            display: inline-block;
+
+            padding: 13px 28px;
+
+            margin: 5px;
+
+            text-decoration: none;
+
+            font-size: 0.82rem;
+
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            transition: 0.3s;
+        }
+
+        .red-button {
+
+            color: white;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #751317,
+                    #c92329,
+                    #741317
+                );
+
+            border: 1px solid #d94a4f;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.7);
+        }
+
+        .red-button:hover {
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+
+                0 8px 25px
+                rgba(201,35,41,0.4);
+        }
+
+        .outline-button {
+
+            color: #e2d6c5;
+
+            border: 1px solid #806d50;
+
+            background:
+                rgba(0,0,0,0.55);
+        }
+
+        .outline-button:hover {
+
+            background: #806d50;
+
+            color: #080808;
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
         section {
-            padding: 75px 15px;
+            padding: 100px 20px;
+        }
+
+        .container {
+
+            max-width: 1150px;
+
+            margin: auto;
+        }
+
+        .section-title {
+
+            text-align: center;
+
+            margin-bottom: 50px;
         }
 
         .section-title h2 {
-            font-size: 2rem;
+
+            font-size: 2.6rem;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
         }
 
-        .featured-info h2 {
-            font-size: 2.4rem;
+        .section-title h2::after {
+
+            content: "";
+
+            display: block;
+
+            width: 100px;
+
+            height: 1px;
+
+            margin: 18px auto;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    #9b7844,
+                    transparent
+                );
         }
 
-        .project-box {
-            padding: 40px 20px;
+        .section-title p {
+
+            color: #aaa196;
+
+            max-width: 700px;
+
+            margin: auto;
+
+            font-size: 1.15rem;
         }
-    }
 
-</style>
+
+        /* =========================
+           ZERO INTRO
+        ========================= */
+
+        .zero-intro {
+
+            background:
+
+                linear-gradient(
+                    180deg,
+                    #080808,
+                    #120c0a,
+                    #080808
+                );
+
+            border-bottom:
+                1px solid #30261e;
+        }
+
+        .zero-intro-box {
+
+            max-width: 900px;
+
+            margin: auto;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+        .zero-symbol {
+
+            font-size: 4rem;
+
+            color: #b9965a;
+
+            margin-bottom: 20px;
+
+            text-shadow:
+                0 0 20px
+                rgba(185,150,90,0.25);
+        }
+
+        .zero-intro-box h2 {
+
+            font-size: 2.8rem;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 20px;
+        }
+
+        .zero-intro-box h2 span {
+
+            color: #c92329;
+        }
+
+        .zero-intro-box p {
+
+            color: #bbb3a8;
+
+            font-size: 1.2rem;
+
+            margin-bottom: 18px;
+        }
+
+
+        /* =========================
+           GENETICS
+        ========================= */
+
+        .genetics {
+
+            background:
+
+                radial-gradient(
+                    ellipse at center,
+                    #25100e,
+                    #080808 72%
+                );
+        }
+
+        .genetics-grid {
+
+            max-width: 1000px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .genetics-card {
+
+            padding: 35px 25px;
+
+            text-align: center;
+
+            background:
+
+                linear-gradient(
+                    145deg,
+                    rgba(31,22,18,0.95),
+                    rgba(8,8,8,0.98)
+                );
+
+            border: 1px solid #49372b;
+
+            box-shadow:
+
+                0 15px 35px
+                rgba(0,0,0,0.6);
+
+            transition: 0.3s;
+        }
+
+        .genetics-card:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                #806d50;
+        }
+
+        .genetics-card .symbol {
+
+            font-size: 2.5rem;
+
+            color: #b9965a;
+
+            margin-bottom: 15px;
+        }
+
+        .genetics-card h3 {
+
+            font-size: 1.4rem;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 12px;
+        }
+
+        .genetics-card p {
+
+            color: #958d84;
+
+            font-size: 1rem;
+        }
+
+
+        /* =========================
+           LINEAGE
+        ========================= */
+
+        .lineage {
+
+            background:
+
+                linear-gradient(
+                    rgba(8,8,8,0.93),
+                    rgba(15,9,8,0.97)
+                ),
+
+                url("Kasper.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-attachment: fixed;
+        }
+
+        .lineage-intro {
+
+            max-width: 800px;
+
+            margin:
+                0 auto 45px;
+
+            text-align: center;
+
+            color: #bdb5aa;
+
+            font-size: 1.18rem;
+        }
+
+        .lineage-box {
+
+            max-width: 900px;
+
+            margin: auto;
+
+            padding: 50px 40px;
+
+            text-align: center;
+
+            background:
+
+                linear-gradient(
 ```
-
-</head>
-
-<body>
-
-```
-<!-- NAVIGATION -->
-
-<nav>
-
-    <div class="nav-container">
-
-        <a href="index.html" class="logo">
-
-            <img
-                src="logo.jpg"
-                alt="Dragons Of The North Logo"
-            >
-
-            <span>
-                Dragons Of The North
-            </span>
-
-        </a>
-
-        <ul class="nav-links">
-
-            <li>
-                <a href="index.html#story">
-                    Our Story
-                </a>
-            </li>
-
-            <li>
-                <a href="index.html#available">
-                    Available
-                </a>
-            </li>
-
-            <li>
-                <a href="index.html#genetics">
-                    Genetics
-                </a>
-            </li>
-
-            <li>
-                <a href="#lineage">
-                    Zero
-                </a>
-            </li>
-
-        </ul>
-
-    </div>
-
-</nav>
-
-
-<!-- KASPER BACKGROUND HERO -->
-
-<header class="hero">
-
-    <div class="hero-content">
-
-        <div class="kicker">
-            Dragons Of The North
-        </div>
-
-        <h1>
-
-            Zero
-
-            <span>
-                Bloodline
-            </span>
-
-        </h1>
-
-        <div class="divider"></div>
-
-        <p>
-            A dedicated bloodline built around
-            genetics, quality, and the next generation
-            of Dragons Of The North.
-        </p>
-
-        <a
-            href="#featured"
-            class="button red-button"
-        >
-            Meet Kasper
-        </a>
-
-        <a
-            href="#lineage"
-            class="button outline-button"
-        >
-            Explore Lineage
-        </a>
-
-    </div>
-
-</header>
-
-
-<!-- FEATURED KASPER -->
-
-<section
-    class="featured"
-    id="featured"
->
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>
-                Featured Dragon
-            </h2>
-
-            <p>
-                Meet Kasper from the Zero project.
-            </p>
-
-        </div>
-
-        <div class="featured-grid">
-
-            <div class="photo-frame">
-
-                <img
-                    src="Kasper.jpg"
-                    alt="Kasper - Zero Bloodline"
-                >
-
-            </div>
-
-            <div class="featured-info">
-
-                <div class="label">
-                    Zero Project
-                </div>
-
-                <h2>
-                    Kasper
-                    <span>•</span>
-                </h2>
-
-                <p>
-                    Kasper is featured on the Zero side
-                    of Dragons Of The North.
-                </p>
-
-                <p>
-                    As the project continues to grow,
-                    this page will become a home for the
-                    dragons, pairings, genetics, and
-                    future generations connected to this
-                    bloodline.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ZERO PARENTS -->
-
-<section
-    class="lineage"
-    id="lineage"
->
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>
-                Zero Foundation
-            </h2>
-
-            <p>
-                The dragons behind the Zero bloodline.
-            </p>
-
-        </div>
-
-        <div class="lineage-intro">
-
-            Mikey and Minnie represent the foundation
-            of the Zero side of Dragons Of The North.
-
-        </div>
-
-        <div class="parents">
-
-            <div class="parent">
-
-                <img
-                    src="Mikey.jpg"
-                    alt="Mikey - Zero Parent"
-                >
-
-                <div class="role">
-                    Zero Parent
-                </div>
-
-                <h3>
-                    Mikey
-                </h3>
-
-                <p>
-                    Foundation dragon of the
-                    Zero project.
-                </p>
-
-            </div>
-
-
-            <div class="parent">
-
-                <img
-                    src="Minnie.jpg"
-                    alt="Minnie - Zero Parent"
-                >
-
-                <div class="role">
-                    Zero Parent
-                </div>
-
-                <h3>
-                    Minnie
-                </h3>
-
-                <p>
-                    Foundation dragon of the
-                    Zero project.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- PROJECT -->
-
-<section class="project">
-
-    <div class="container">
-
-        <div class="project-box">
-
-            <h2>
-                Building The Zero Legacy
-            </h2>
-
-            <p>
-                Dragons Of The North is focused on
-                developing healthy dragons while
-                carefully building genetics and
-                bloodlines for future generations.
-            </p>
-
-            <p>
-                The Zero project will continue to
-                evolve as new pairings, offspring,
-                and breeding projects are developed.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- AVAILABLE -->
-
-<section class="available">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <h2>
-                Available Zero Dragons
-            </h2>
-
-            <p>
-                Future Zero dragons will be listed here
-                as they become available.
-            </p>
-
-        </div>
-
-        <div class="available-box">
-
-            <h3>
-                The Next Generation
-            </h3>
-
-            <p>
-                Photos, genetics, sex, hatch dates,
-                bloodline information, and pricing will
-                be added when Zero dragons are available.
-            </p>
-
-            <a
-                href="https://www.facebook.com/profile.php?id=61579598882265"
-                target="_blank"
-                class="button red-button"
-            >
-                Follow Our Journey
-            </a>
-
-            <a
-                href="index.html"
-                class="button outline-button"
-            >
-                Return Home
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-    <p>
-        © 2026 Dragons Of The North. All Rights Reserved.
-    </p>
-
-    <p>
-        Zero Bloodline • Quality • Genetics • Responsibility
-    </p>
-
-</footer>
-```
-
-</body>
-</html>
