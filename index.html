@@ -1,1 +1,648 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dragons Of The North | Bearded Dragon Breeder</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body><header><a class="brand" href="#home">🐉 <span>DRAGONS <small>OF THE</small> NORTH</span></a><button id="menu">☰</button><nav><a href="#home">Home</a><a href="#available">Available</a><a href="#projects">Projects</a><a href="#breeders">Breeders</a><a href="#care">Care</a><a href="#contact">Contact</a></nav></header><main id="home"><section class="hero"><div><p class="eyebrow">BEARDED DRAGON BREEDER • MINNESOTA</p><h1>Where <em>Quality</em><br>Meets Genetics.</h1><p>Welcome to Dragons Of The North. Our goal is simple: raise healthy, well-cared-for bearded dragons while building exciting genetics and producing animals we can be proud of.</p><a class="btn" href="#available">View Available Dragons</a><a class="btn outline" href="#projects">Explore Projects</a></div></section><section class="intro"><div><p class="eyebrow">THE DRAGON JOURNEY</p><h2>Built around healthy dragons and responsible breeding.</h2></div><p>Dragons Of The North is a small-scale bearded dragon breeding project focused on quality animals, strong care standards, and interesting genetic projects. Every dragon deserves the right start and the right home.</p></section><section id="available" class="dark"><div class="heading"><div><p class="eyebrow">CURRENT LISTINGS</p><h2>Available Dragons</h2></div><span>● UPDATED REGULARLY</span></div><div class="cards"><article><img src="assets/zyra.jpg" alt="Zyra bearded dragon"><div><label>PROFILE</label><h3>Zyra</h3><p>A calm, personable dragon with a strong appetite and a striking appearance.</p><a href="#contact">Ask about Zyra →</a></div></article><article><div class="placeholder">🥚</div><div><label>COMING SOON</label><h3>Upcoming Babies</h3><p>Listings will include sex, genetics, DOB, sire, dam, and pricing.</p><a href="#contact">Join the waiting list →</a></div></article><article><div class="placeholder">🧬</div><div><label>PROJECT</label><h3>Future Projects</h3><p>Follow upcoming pairings and see what genetics we are working toward next.</p><a href="#projects">See projects →</a></div></article></div></section><section id="projects" class="projects"><div class="center"><p class="eyebrow">GENETICS & BREEDING</p><h2>Our Projects</h2><p>Building toward healthy, high-quality animals while exploring exciting combinations.</p></div><div class="grid"><div><b>01</b><h3>Zeros</h3><p>Building a quality Zero-focused project and selecting animals for future pairings.</p></div><div><b>02</b><h3>Red Monster</h3><p>Working with rich red coloration and established Red Monster bloodlines.</p></div><div><b>03</b><h3>Hypo • Trans</h3><p>Exploring recessive genetics and thoughtful combinations across future clutches.</p></div><div><b>04</b><h3>Future Goals</h3><p>Documenting pairings, hatchlings, and the traits we want to carry forward.</p></div></div></section><section id="breeders" class="dark"><div class="center"><p class="eyebrow">MEET THE DRAGONS</p><h2>Our Breeders</h2><p>Individual profiles will include photos, age, sex, genetics, lineage, and breeding history.</p></div><div class="note">🐲 <div><h3>More profiles coming soon</h3><p>We’re building detailed pages for the dragons behind our projects.</p></div></div></section><section id="care" class="care"><div><p class="eyebrow">NEW OWNER RESOURCE</p><h2>Starting your dragon journey?</h2><p>Our care section will cover enclosure setup, UVB, basking temperatures, feeding, hydration, supplementation, handling, and common beginner questions.</p><a class="btn" href="#contact">Ask a Care Question</a></div><div class="caregrid"><div>✓ Enclosure Setup</div><div>✓ Lighting & UVB</div><div>✓ Feeding & Nutrition</div><div>✓ Handling & Socialization</div><div>✓ Hatchling Care</div><div>✓ Shipping & Arrival</div></div></section><section id="contact" class="contact"><div><p class="eyebrow">GET IN TOUCH</p><h2>Ready to meet your next dragon?</h2><p>Questions about an available dragon, genetics, upcoming clutches, or care? Send us a message.</p><a class="btn" href="mailto:your@email.com">Email Dragons Of The North</a><a class="btn outline" href="#" onclick="alert('Replace this with your Facebook page link.');return false">Facebook</a><small>Replace the placeholder email and Facebook link before launch.</small></div></section></main><footer><strong>DRAGONS OF THE NORTH</strong><p>Quality • Genetics • Care</p><small>© 2026 Dragons Of The North</small></footer><script>const h=document.querySelector('header'),m=document.querySelector('#menu');m.onclick=()=>h.classList.toggle('open');document.querySelectorAll('nav a').forEach(a=>a.onclick=()=>h.classList.remove('open'));</script></body></html>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dragons Of The North | Bearded Dragon Breeder</title>
+
+    <meta name="description" content="Dragons Of The North — quality bearded dragons, genetics, bloodlines and responsible breeding in Minnesota.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0b0b;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.92);
+            border-bottom: 1px solid #292929;
+            padding: 15px 5%;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #b51f24;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #d62b31;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 20px 80px;
+            background:
+                linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.85)),
+                radial-gradient(circle at center, #3b1113 0%, #0b0b0b 65%);
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 8vw, 90px);
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 span {
+            color: #c92329;
+        }
+
+        .hero p {
+            font-size: 21px;
+            color: #dddddd;
+            max-width: 700px;
+            margin: 0 auto 35px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        .button-primary {
+            background: #b51f24;
+            color: white;
+        }
+
+        .button-primary:hover {
+            background: #d62b31;
+            transform: translateY(-2px);
+        }
+
+        .button-secondary {
+            border: 1px solid #777;
+            color: white;
+        }
+
+        .button-secondary:hover {
+            border-color: #c92329;
+            color: #c92329;
+        }
+
+        /* GENERAL SECTIONS */
+
+        section {
+            padding: 90px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #aaa;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* STORY */
+
+        .story {
+            background: #111111;
+        }
+
+        .story-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .story-content p {
+            color: #cccccc;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* FOCUS CARDS */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #151515;
+            border: 1px solid #292929;
+            padding: 30px 22px;
+            border-radius: 8px;
+            text-align: center;
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #b51f24;
+        }
+
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #aaa;
+            font-size: 15px;
+        }
+
+        /* GENETICS */
+
+        .genetics {
+            background:
+                linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.9)),
+                radial-gradient(circle at center, #351012, #0b0b0b 70%);
+            text-align: center;
+        }
+
+        .genetics-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 30px 0;
+        }
+
+        .genetics-list span {
+            border: 1px solid #444;
+            padding: 12px 20px;
+            border-radius: 30px;
+            background: #151515;
+        }
+
+        /* FEATURED */
+
+        .featured {
+            background: #0b0b0b;
+        }
+
+        .featured-box {
+            border: 1px solid #292929;
+            background: #121212;
+            padding: 50px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .featured-box p {
+            color: #aaa;
+            margin-bottom: 25px;
+        }
+
+        /* CTA */
+
+        .cta {
+            background: #b51f24;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .cta .button {
+            background: #ffffff;
+            color: #111111;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #050505;
+            text-align: center;
+            padding: 35px 20px;
+            color: #888;
+        }
+
+        footer strong {
+            color: #ffffff;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            nav ul {
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 650px) {
+            nav {
+                position: relative;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 85vh;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 65px 18px;
+            }
+
+            .featured-box {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+    <div class="nav-container">
+
+        <a href="#" class="logo">
+            DRAGONS <span>OF THE NORTH</span>
+        </a>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#dragons">Available Dragons</a></li>
+            <li><a href="#genetics">Genetics</a></li>
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+            DRAGONS <span>OF THE NORTH</span>
+        </h1>
+
+        <p>
+            Quality bearded dragons. Strong genetics. Responsible breeding.
+            Raising exceptional dragons with health, structure, personality
+            and genetics in mind.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#dragons" class="button button-primary">
+                🐉 View Available Dragons
+            </a>
+
+            <a href="#genetics" class="button button-secondary">
+                🧬 Explore Our Genetics
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- OUR STORY -->
+
+<section class="story" id="story">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Our Story</h2>
+            <p>From one dragon to a growing passion.</p>
+        </div>
+
+        <div class="story-content">
+
+            <p>
+                Dragons Of The North started with a simple love for bearded
+                dragons and grew into a passion for responsible breeding,
+                genetics and producing healthy, quality animals.
+            </p>
+
+            <p>
+                Our goal is more than producing beautiful dragons. We focus
+                on proper care, thoughtful pairings and giving every dragon
+                the best possible start before finding the right home.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHAT WE FOCUS ON -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>What We Focus On</h2>
+
+            <p>
+                Our breeding program is built around health, quality,
+                genetics and responsible placement.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">🧬</div>
+
+                <h3>Quality Genetics</h3>
+
+                <p>
+                    Carefully selected bloodlines and breeding projects
+                    focused on producing quality offspring.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">❤️</div>
+
+                <h3>Health First</h3>
+
+                <p>
+                    Proper nutrition, UVB, heat, husbandry and daily care
+                    are the foundation of our program.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">🐉</div>
+
+                <h3>Exceptional Dragons</h3>
+
+                <p>
+                    We strive for strong structure, color, genetics and
+                    great personalities.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">🏡</div>
+
+                <h3>Right Homes</h3>
+
+                <p>
+                    Every dragon deserves a home prepared to provide the
+                    care and commitment they need.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- AVAILABLE DRAGONS -->
+
+<section class="featured" id="dragons">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>🐲 Available Dragons</h2>
+
+            <p>
+                Our current dragons will be featured here as they become
+                available.
+            </p>
+
+        </div>
+
+
+        <div class="featured-box">
+
+            <h3>Our next available dragons are coming soon.</h3>
+
+            <p>
+                Check back for current babies, genetics, photos,
+                pricing and individual dragon profiles.
+            </p>
+
+            <a href="#contact" class="button button-primary">
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GENETICS -->
+
+<section class="genetics" id="genetics">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>🧬 Genetics & Bloodlines</h2>
+
+            <p>
+                Explore the genetics and breeding projects behind
+                Dragons Of The North.
+            </p>
+
+        </div>
+
+
+        <div class="genetics-list">
+
+            <span>Red Monster</span>
+            <span>Zero</span>
+            <span>Hypo</span>
+            <span>Trans</span>
+            <span>Witblits</span>
+            <span>Dark Series</span>
+
+        </div>
+
+
+        <a href="#contact" class="button button-secondary">
+            Learn More
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CALL TO ACTION -->
+
+<section class="cta" id="contact">
+
+    <div class="container">
+
+        <h2>Looking For Your Next Dragon?</h2>
+
+        <p>
+            Follow Dragons Of The North for available dragons,
+            upcoming clutches and breeding updates.
+        </p>
+
+        <a href="https://www.facebook.com/" class="button" target="_blank">
+            📱 Follow Us On Facebook
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        <strong>Dragons Of The North</strong>
+    </p>
+
+    <p>
+        Quality • Genetics • Passion
+    </p>
+
+    <p>
+        © 2026 Dragons Of The North. All rights reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
+```
