@@ -8,7 +8,7 @@
 ```
 <title>Zero Bloodline | Dragons Of The North</title>
 
-<meta name="description" content="Explore the Zero bloodline at Dragons Of The North, including Kasper, his lineage, and the Zero parents Mikey and Minnie.">
+<meta name="description" content="Explore the Zero bloodline at Dragons Of The North, including Kasper, Mikey, Minnie, and future Zero projects.">
 
 <!-- Fantasy Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,10 +17,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-    /* =========================
-       GLOBAL
-    ========================= */
 
     * {
         margin: 0;
@@ -39,12 +35,7 @@
         line-height: 1.7;
     }
 
-    h1,
-    h2,
-    h3,
-    .logo,
-    .btn,
-    nav {
+    h1, h2, h3, .logo, .btn, nav {
         font-family: "Cinzel", Georgia, serif;
     }
 
@@ -80,7 +71,6 @@
     .nav-container {
         max-width: 1250px;
         margin: auto;
-
         padding: 11px 25px;
 
         display: flex;
@@ -91,7 +81,6 @@
     .logo {
         display: flex;
         align-items: center;
-
         gap: 11px;
 
         color: #ffffff;
@@ -107,15 +96,11 @@
     .logo img {
         height: 48px;
         width: auto;
-
         object-fit: contain;
-
         border-radius: 4px;
 
         filter:
-            drop-shadow(
-                0 0 5px rgba(0,0,0,0.8)
-            );
+            drop-shadow(0 0 5px rgba(0,0,0,0.8));
     }
 
     .logo span {
@@ -125,17 +110,14 @@
     .nav-links {
         display: flex;
         gap: 28px;
-
         list-style: none;
     }
 
     .nav-links a {
         color: #d8d0c3;
-
         text-decoration: none;
 
         font-family: "Cinzel", Georgia, serif;
-
         font-size: 0.82rem;
         letter-spacing: 1px;
 
@@ -151,11 +133,11 @@
 
 
     /* =========================
-       HERO
+       KASPER HERO
     ========================= */
 
     .hero {
-        min-height: 90vh;
+        min-height: 100vh;
 
         display: flex;
         align-items: center;
@@ -163,33 +145,36 @@
 
         text-align: center;
 
-        padding: 130px 20px 90px;
+        padding: 140px 20px 100px;
 
         position: relative;
-
         overflow: hidden;
 
+        /*
+         * YOUR REAL KASPER PHOTO
+         */
         background-image:
 
             linear-gradient(
-                rgba(0,0,0,0.60),
-                rgba(0,0,0,0.82)
+                rgba(0,0,0,0.62),
+                rgba(0,0,0,0.80)
             ),
 
             linear-gradient(
-                rgba(75,8,12,0.18),
-                rgba(0,0,0,0.45)
+                rgba(90,15,18,0.20),
+                rgba(0,0,0,0.35)
             ),
 
             url("Kasper.jpg");
 
         background-size: cover;
-
         background-position: center center;
-
         background-repeat: no-repeat;
     }
 
+    /*
+     * Dark cinematic edges
+     */
     .hero::before {
         content: "";
 
@@ -199,5 +184,14 @@
         background:
             radial-gradient(
                 ellipse at center,
-                transparent 10%,
+                transparent 5%,
+                rgba(0,0,0,0.20) 45%,
+                rgba(0,0,0,0.88) 100%
+            );
+
+        pointer-events: none;
+    }
+
+    /*
+     * Subtle re*
 ```
