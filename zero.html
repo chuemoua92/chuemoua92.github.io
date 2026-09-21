@@ -1,0 +1,470 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zero Bloodline | Dragons Of The North</title>
+
+    <meta name="description" content="Explore the Zero bloodline at Dragons Of The North, including our breeding parents and available Zero bearded dragons.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0b0b;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background: #050505;
+            border-bottom: 1px solid #292929;
+            padding: 18px 5%;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #c92329;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #c92329;
+        }
+
+        /* HERO */
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px 80px;
+            background:
+                linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.9)),
+                radial-gradient(circle at center, #351012, #0b0b0b 70%);
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 75px);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #c92329;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            color: #cccccc;
+            font-size: 18px;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #999999;
+        }
+
+        /* PARENTS */
+
+        .parents {
+            background: #111111;
+        }
+
+        .parent-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .parent-card {
+            background: #171717;
+            border: 1px solid #292929;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            transition: .3s;
+        }
+
+        .parent-card:hover {
+            transform: translateY(-5px);
+            border-color: #b51f24;
+        }
+
+        .parent-card img {
+            width: 100%;
+            height: 430px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .parent-info {
+            padding: 25px;
+        }
+
+        .parent-info h3 {
+            font-size: 27px;
+            margin-bottom: 5px;
+        }
+
+        .parent-info p {
+            color: #aaa;
+        }
+
+        .parent-label {
+            color: #c92329 !important;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* AVAILABLE DRAGONS */
+
+        .available {
+            background: #0b0b0b;
+        }
+
+        .available-box {
+            border: 1px solid #292929;
+            background: #121212;
+            border-radius: 10px;
+            padding: 50px 25px;
+            text-align: center;
+        }
+
+        .available-box h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .available-box p {
+            color: #999999;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        /* BUTTON */
+
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 28px;
+            background: #b51f24;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        .button:hover {
+            background: #d62b31;
+            transform: translateY(-2px);
+        }
+
+        /* BACK */
+
+        .back-section {
+            text-align: center;
+            padding: 50px 20px;
+            background: #050505;
+        }
+
+        .back-link {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: #c92329;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #050505;
+            border-top: 1px solid #222222;
+            text-align: center;
+            padding: 35px 20px;
+            color: #777777;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .parent-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .parent-card img {
+                height: 380px;
+            }
+
+            section {
+                padding: 60px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+            DRAGONS <span>OF THE NORTH</span>
+        </a>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="index.html#dragons">Available Dragons</a>
+            <a href="zero.html">Zero Bloodline</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <h1>
+            <span>Zero</span> Bloodline
+        </h1>
+
+        <p>
+            Explore the Zero breeding project at Dragons Of The North,
+            including the foundation parents and future offspring from
+            this bloodline.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- PARENTS -->
+
+<section class="parents">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>🧬 Zero Bloodline Parents</h2>
+
+            <p>
+                The foundation parents behind our Zero project.
+            </p>
+
+        </div>
+
+
+        <div class="parent-grid">
+
+
+            <!-- MIKEY -->
+
+            <div class="parent-card">
+
+                <img
+                    src="Mikey.jpg"
+                    alt="Mikey - Zero Bloodline Parent"
+                >
+
+                <div class="parent-info">
+
+                    <p class="parent-label">
+                        ZERO BLOODLINE PARENT
+                    </p>
+
+                    <h3>Mikey</h3>
+
+                    <p>
+                        Foundation parent of our Zero breeding project.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- MINNIE -->
+
+            <div class="parent-card">
+
+                <img
+                    src="Minnie.jpg"
+                    alt="Minnie - Zero Bloodline Parent"
+                >
+
+                <div class="parent-info">
+
+                    <p class="parent-label">
+                        ZERO BLOODLINE PARENT
+                    </p>
+
+                    <h3>Minnie</h3>
+
+                    <p>
+                        Foundation parent of our Zero breeding project.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- AVAILABLE ZEROS -->
+
+<section class="available">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>🐉 Available Zero Dragons</h2>
+
+            <p>
+                Our current and future Zero offspring will be listed here.
+            </p>
+
+        </div>
+
+
+        <div class="available-box">
+
+            <h3>New Zero Dragons Coming Soon</h3>
+
+            <p>
+                Check back for available Zero offspring, including
+                photos, sex, date of birth, genetics, lineage and pricing.
+            </p>
+
+            <a href="index.html#contact" class="button">
+                Contact Dragons Of The North
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BACK TO HOME -->
+
+<section class="back-section">
+
+    <a href="index.html" class="back-link">
+        ← Back to Dragons Of The North
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        <strong>Dragons Of The North</strong>
+    </p>
+
+    <p>
+        Quality • Genetics • Passion
+    </p>
+
+    <p>
+        © 2026 Dragons Of The North. All rights reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
+```
