@@ -4,662 +4,1185 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Zero Bloodline | Dragons Of The North</title>
+<title>Zero Bloodline | Dragons Of The North</title>
 
-    <meta
-        name="description"
-        content="Zero Bloodline - Dragons Of The North"
-    >
+<meta
+name="description"
+content="Zero Bloodline - Dragons Of The North"
+>
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin
+>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
+<link
+href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+rel="stylesheet"
+>
 
-    <style>
+<style>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        body {
-            font-family: "Cormorant Garamond", Georgia, serif;
-            background: #080808;
-            color: #f1eee8;
-            line-height: 1.7;
-        }
+body {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    background: #080808;
+    color: #f1eee8;
+    line-height: 1.7;
+}
 
-        h1,
-        h2,
-        h3,
-        nav,
-        .logo,
-        .button {
-            font-family: "Cinzel", Georgia, serif;
-        }
+h1,
+h2,
+h3,
+nav,
+.logo,
+.button {
+    font-family: "Cinzel", Georgia, serif;
+}
 
 
-        /* =========================
-           NAVIGATION
-        ========================= */
+/* =========================
+   NAVIGATION
+========================= */
 
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
+nav {
 
-            background: rgba(5,5,5,0.96);
+    position: fixed;
 
-            border-bottom: 1px solid #493b2b;
+    top: 0;
+    left: 0;
 
-            box-shadow:
-                0 4px 20px rgba(0,0,0,0.7);
-        }
+    width: 100%;
 
-        .nav-container {
-            max-width: 1250px;
-            margin: auto;
+    z-index: 1000;
 
-            padding: 10px 25px;
+    background: rgba(5,5,5,0.96);
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+    border-bottom: 1px solid #493b2b;
 
-        .logo {
-            display: flex;
-            align-items: center;
+    box-shadow:
+        0 4px 20px rgba(0,0,0,0.7);
+}
 
-            gap: 11px;
+.nav-container {
 
-            color: white;
+    max-width: 1250px;
 
-            text-decoration: none;
+    margin: auto;
 
-            font-size: 1rem;
+    padding: 10px 25px;
 
-            font-weight: 700;
+    display: flex;
 
-            letter-spacing: 1.5px;
+    align-items: center;
 
-            text-transform: uppercase;
-        }
+    justify-content: space-between;
+}
 
-        .logo img {
-            height: 48px;
-            width: auto;
+.logo {
 
-            object-fit: contain;
+    display: flex;
 
-            border-radius: 4px;
-        }
+    align-items: center;
 
-        .logo span {
-            color: white;
-        }
+    gap: 11px;
 
-        .nav-links {
-            display: flex;
+    color: white;
 
-            gap: 28px;
+    text-decoration: none;
 
-            list-style: none;
-        }
+    font-size: 1rem;
 
-        .nav-links a {
-            color: #d8d0c3;
+    font-weight: 700;
 
-            text-decoration: none;
+    letter-spacing: 1.5px;
 
-            font-size: 0.82rem;
+    text-transform: uppercase;
+}
 
-            letter-spacing: 1px;
+.logo img {
 
-            transition: 0.3s;
-        }
+    height: 48px;
 
-        .nav-links a:hover {
-            color: #c92329;
-        }
+    width: auto;
 
+    object-fit: contain;
 
-        /* =========================
-           HERO
-        ========================= */
+    border-radius: 4px;
+}
 
-        .hero {
+.logo span {
+    color: white;
+}
 
-            min-height: 100vh;
+.nav-links {
 
-            position: relative;
+    display: flex;
 
-            display: flex;
+    gap: 28px;
 
-            align-items: center;
+    list-style: none;
+}
 
-            justify-content: center;
+.nav-links a {
 
-            text-align: center;
+    color: #d8d0c3;
 
-            padding: 130px 20px 90px;
+    text-decoration: none;
 
-            overflow: hidden;
+    font-size: 0.82rem;
 
+    letter-spacing: 1px;
 
-            /*
-             * KASPER REMAINS IN THE
-             * BACKGROUND ONLY.
-             *
-             * He is intentionally NOT
-             * spotlighted here.
-             */
+    transition: 0.3s;
+}
 
-            background-image:
+.nav-links a:hover {
 
-                linear-gradient(
-                    rgba(0,0,0,0.68),
-                    rgba(0,0,0,0.88)
-                ),
+    color: #c92329;
+}
 
-                url("Kasper.jpg");
 
-            background-size: cover;
+/* =========================
+   HERO
 
-            background-position: center center;
+   KASPER IS BACKGROUND ONLY
+========================= */
 
-            background-repeat: no-repeat;
-        }
+.hero {
 
+    min-height: 100vh;
 
-        /*
-         * Dark fantasy vignette.
-         *
-         * This keeps Kasper visible
-         * in the background without
-         * making him the focal point.
-         */
+    position: relative;
 
-        .hero::after {
+    display: flex;
 
-            content: "";
+    align-items: center;
 
-            position: absolute;
+    justify-content: center;
 
-            inset: 0;
+    text-align: center;
 
-            background:
+    padding: 130px 20px 90px;
 
-                radial-gradient(
-                    ellipse at center,
-                    rgba(0,0,0,0.05) 0%,
-                    rgba(0,0,0,0.25) 45%,
-                    rgba(0,0,0,0.90) 100%
-                );
+    overflow: hidden;
 
-            pointer-events: none;
-        }
+    background-image:
 
-        .hero-content {
+        linear-gradient(
+            rgba(0,0,0,0.62),
+            rgba(0,0,0,0.88)
+        ),
 
-            position: relative;
+        url("Kasper.jpg");
 
-            z-index: 2;
+    background-size: cover;
 
-            max-width: 900px;
-        }
+    background-position: center center;
 
-        .kicker {
+    background-repeat: no-repeat;
+}
 
-            color: #b9965a;
 
-            font-family: "Cinzel", Georgia, serif;
+/*
+   Dark overlay.
 
-            font-size: 0.85rem;
+   Kasper stays visible,
+   but the text is the focus.
+*/
 
-            letter-spacing: 6px;
+.hero::after {
 
-            text-transform: uppercase;
+    content: "";
 
-            margin-bottom: 20px;
+    position: absolute;
 
-            text-shadow:
-                0 2px 10px black;
-        }
+    inset: 0;
 
-        .hero h1 {
+    background:
 
-            font-size:
-                clamp(3.5rem, 9vw, 7rem);
+        radial-gradient(
+            ellipse at center,
+            transparent 10%,
+            rgba(0,0,0,0.25) 50%,
+            rgba(0,0,0,0.88) 100%
+        );
 
-            line-height: 0.9;
+    pointer-events: none;
+}
 
-            font-weight: 800;
+.hero-content {
 
-            letter-spacing: 6px;
+    position: relative;
 
-            text-transform: uppercase;
+    z-index: 2;
 
-            text-shadow:
+    max-width: 900px;
+}
 
-                0 5px 15px black,
+.kicker {
 
-                0 10px 40px black;
-        }
+    color: #b9965a;
 
-        .hero h1 span {
+    font-family: "Cinzel", Georgia, serif;
 
-            display: block;
+    font-size: 0.85rem;
 
-            color: #c92329;
+    letter-spacing: 6px;
 
-            font-size: 0.5em;
+    text-transform: uppercase;
 
-            letter-spacing: 8px;
+    margin-bottom: 20px;
 
-            margin-top: 18px;
+    text-shadow:
+        0 2px 10px black;
+}
 
-            text-shadow:
+.hero h1 {
 
-                0 0 15px black,
+    font-size:
+        clamp(3.5rem, 9vw, 7rem);
 
-                0 0 25px
-                rgba(201,35,41,0.6);
-        }
+    line-height: 0.9;
 
-        .divider {
+    font-weight: 800;
 
-            width: 180px;
+    letter-spacing: 6px;
 
-            height: 1px;
+    text-transform: uppercase;
 
-            background:
+    text-shadow:
 
-                linear-gradient(
-                    90deg,
-                    transparent,
-                    #b9965a,
-                    transparent
-                );
+        0 5px 15px black,
 
-            margin: 30px auto;
-        }
+        0 10px 40px black;
+}
 
-        .hero p {
+.hero h1 span {
 
-            max-width: 700px;
+    display: block;
 
-            margin: 0 auto 30px;
+    color: #c92329;
 
-            color: #eee8df;
+    font-size: 0.5em;
 
-            font-size: 1.3rem;
+    letter-spacing: 8px;
 
-            text-shadow:
-                0 2px 10px black;
-        }
+    margin-top: 18px;
 
+    text-shadow:
 
-        /* =========================
-           BUTTONS
-        ========================= */
+        0 0 15px black,
 
-        .button {
+        0 0 25px rgba(201,35,41,0.6);
+}
 
-            display: inline-block;
+.divider {
 
-            padding: 13px 28px;
+    width: 180px;
 
-            margin: 5px;
+    height: 1px;
 
-            text-decoration: none;
+    background:
 
-            font-size: 0.82rem;
+        linear-gradient(
+            90deg,
+            transparent,
+            #b9965a,
+            transparent
+        );
 
-            font-weight: 600;
+    margin: 30px auto;
+}
 
-            letter-spacing: 1px;
+.hero p {
 
-            text-transform: uppercase;
+    max-width: 700px;
 
-            transition: 0.3s;
-        }
+    margin: 0 auto 30px;
 
-        .red-button {
+    color: #eee8df;
 
-            color: white;
+    font-size: 1.3rem;
 
-            background:
+    text-shadow:
+        0 2px 10px black;
+}
 
-                linear-gradient(
-                    135deg,
-                    #751317,
-                    #c92329,
-                    #741317
-                );
 
-            border: 1px solid #d94a4f;
+/* =========================
+   BUTTONS
+========================= */
 
-            box-shadow:
-                0 5px 20px rgba(0,0,0,0.7);
-        }
+.button {
 
-        .red-button:hover {
+    display: inline-block;
 
-            transform:
-                translateY(-3px);
+    padding: 13px 28px;
 
-            box-shadow:
+    margin: 5px;
 
-                0 8px 25px
-                rgba(201,35,41,0.4);
-        }
+    text-decoration: none;
 
-        .outline-button {
+    font-size: 0.82rem;
 
-            color: #e2d6c5;
+    font-weight: 600;
 
-            border: 1px solid #806d50;
+    letter-spacing: 1px;
 
-            background:
-                rgba(0,0,0,0.55);
-        }
+    text-transform: uppercase;
 
-        .outline-button:hover {
+    transition: 0.3s;
+}
 
-            background: #806d50;
+.red-button {
 
-            color: #080808;
-        }
+    color: white;
 
+    background:
 
-        /* =========================
-           SECTIONS
-        ========================= */
+        linear-gradient(
+            135deg,
+            #751317,
+            #c92329,
+            #741317
+        );
 
-        section {
-            padding: 100px 20px;
-        }
+    border: 1px solid #d94a4f;
 
-        .container {
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.7);
+}
 
-            max-width: 1150px;
+.red-button:hover {
 
-            margin: auto;
-        }
+    transform:
+        translateY(-3px);
 
-        .section-title {
+    box-shadow:
+        0 8px 25px
+        rgba(201,35,41,0.4);
+}
 
-            text-align: center;
+.outline-button {
 
-            margin-bottom: 50px;
-        }
+    color: #e2d6c5;
 
-        .section-title h2 {
+    border: 1px solid #806d50;
 
-            font-size: 2.6rem;
+    background:
+        rgba(0,0,0,0.55);
+}
 
-            letter-spacing: 2px;
+.outline-button:hover {
 
-            text-transform: uppercase;
-        }
+    background: #806d50;
 
-        .section-title h2::after {
+    color: #080808;
+}
 
-            content: "";
 
-            display: block;
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
-            width: 100px;
+section {
 
-            height: 1px;
+    padding: 100px 20px;
+}
 
-            margin: 18px auto;
+.container {
 
-            background:
+    max-width: 1150px;
 
-                linear-gradient(
-                    90deg,
-                    transparent,
-                    #9b7844,
-                    transparent
-                );
-        }
+    margin: auto;
+}
 
-        .section-title p {
+.section-title {
 
-            color: #aaa196;
+    text-align: center;
 
-            max-width: 700px;
+    margin-bottom: 50px;
+}
 
-            margin: auto;
+.section-title h2 {
 
-            font-size: 1.15rem;
-        }
+    font-size: 2.6rem;
 
+    letter-spacing: 2px;
 
-        /* =========================
-           ZERO INTRO
-        ========================= */
+    text-transform: uppercase;
+}
 
-        .zero-intro {
+.section-title h2::after {
 
-            background:
+    content: "";
 
-                linear-gradient(
-                    180deg,
-                    #080808,
-                    #120c0a,
-                    #080808
-                );
+    display: block;
 
-            border-bottom:
-                1px solid #30261e;
-        }
+    width: 100px;
 
-        .zero-intro-box {
+    height: 1px;
 
-            max-width: 900px;
+    margin: 18px auto;
 
-            margin: auto;
+    background:
 
-            text-align: center;
+        linear-gradient(
+            90deg,
+            transparent,
+            #9b7844,
+            transparent
+        );
+}
 
-            padding: 30px;
-        }
+.section-title p {
 
-        .zero-symbol {
+    color: #aaa196;
 
-            font-size: 4rem;
+    max-width: 700px;
 
-            color: #b9965a;
+    margin: auto;
 
-            margin-bottom: 20px;
+    font-size: 1.15rem;
+}
 
-            text-shadow:
-                0 0 20px
-                rgba(185,150,90,0.25);
-        }
 
-        .zero-intro-box h2 {
+/* =========================
+   ZERO INTRO
+========================= */
 
-            font-size: 2.8rem;
+.zero-intro {
 
-            letter-spacing: 3px;
+    background:
 
-            margin-bottom: 20px;
-        }
+        linear-gradient(
+            180deg,
+            #080808,
+            #120c0a,
+            #080808
+        );
 
-        .zero-intro-box h2 span {
+    border-bottom:
+        1px solid #30261e;
+}
 
-            color: #c92329;
-        }
+.zero-content {
 
-        .zero-intro-box p {
+    max-width: 850px;
 
-            color: #bbb3a8;
+    margin: auto;
 
-            font-size: 1.2rem;
+    text-align: center;
+}
 
-            margin-bottom: 18px;
-        }
+.zero-content h2 {
 
+    font-size: 2.8rem;
 
-        /* =========================
-           GENETICS
-        ========================= */
+    letter-spacing: 3px;
 
-        .genetics {
+    margin-bottom: 25px;
+}
 
-            background:
+.zero-content h2 span {
 
-                radial-gradient(
-                    ellipse at center,
-                    #25100e,
-                    #080808 72%
-                );
-        }
+    color: #c92329;
+}
 
-        .genetics-grid {
+.zero-content p {
 
-            max-width: 1000px;
+    color: #bbb3a8;
 
-            margin: auto;
+    font-size: 1.2rem;
 
-            display: grid;
+    margin-bottom: 18px;
+}
 
-            grid-template-columns:
-                repeat(3, 1fr);
 
-            gap: 25px;
-        }
+/* =========================
+   GENETICS
+========================= */
 
-        .genetics-card {
+.genetics {
 
-            padding: 35px 25px;
+    background:
 
-            text-align: center;
+        radial-gradient(
+            ellipse at center,
+            #25100e,
+            #080808 72%
+        );
+}
 
-            background:
+.genetics-grid {
 
-                linear-gradient(
-                    145deg,
-                    rgba(31,22,18,0.95),
-                    rgba(8,8,8,0.98)
-                );
+    max-width: 1000px;
 
-            border: 1px solid #49372b;
+    margin: auto;
 
-            box-shadow:
+    display: grid;
 
-                0 15px 35px
-                rgba(0,0,0,0.6);
+    grid-template-columns:
+        repeat(3, 1fr);
 
-            transition: 0.3s;
-        }
+    gap: 25px;
+}
 
-        .genetics-card:hover {
+.genetics-card {
 
-            transform:
-                translateY(-5px);
+    padding: 35px 25px;
 
-            border-color:
-                #806d50;
-        }
+    text-align: center;
 
-        .genetics-card .symbol {
+    background:
 
-            font-size: 2.5rem;
+        linear-gradient(
+            145deg,
+            rgba(31,22,18,0.95),
+            rgba(8,8,8,0.98)
+        );
 
-            color: #b9965a;
+    border: 1px solid #49372b;
 
-            margin-bottom: 15px;
-        }
+    box-shadow:
 
-        .genetics-card h3 {
+        0 15px 35px
+        rgba(0,0,0,0.6);
 
-            font-size: 1.4rem;
+    transition: 0.3s;
+}
 
-            letter-spacing: 2px;
+.genetics-card:hover {
 
-            margin-bottom: 12px;
-        }
+    transform:
+        translateY(-5px);
 
-        .genetics-card p {
+    border-color:
+        #806d50;
+}
 
-            color: #958d84;
+.genetics-card .symbol {
 
-            font-size: 1rem;
-        }
+    font-size: 2.5rem;
 
+    color: #b9965a;
 
-        /* =========================
-           LINEAGE
-        ========================= */
+    margin-bottom: 15px;
+}
 
-        .lineage {
+.genetics-card h3 {
 
-            background:
+    font-size: 1.4rem;
 
-                linear-gradient(
-                    rgba(8,8,8,0.93),
-                    rgba(15,9,8,0.97)
-                ),
+    letter-spacing: 2px;
 
-                url("Kasper.jpg");
+    margin-bottom: 12px;
+}
 
-            background-size: cover;
+.genetics-card p {
 
-            background-position: center;
+    color: #958d84;
 
-            background-attachment: fixed;
-        }
+    font-size: 1rem;
+}
 
-        .lineage-intro {
 
-            max-width: 800px;
+/* =========================
+   LINEAGE
 
-            margin:
-                0 auto 45px;
+   KASPER BACKGROUND
+   NO KASPER SPOTLIGHT
+========================= */
 
-            text-align: center;
+.lineage {
 
-            color: #bdb5aa;
+    background-image:
 
-            font-size: 1.18rem;
-        }
+        linear-gradient(
+            rgba(8,8,8,0.91),
+            rgba(15,9,8,0.96)
+        ),
 
-        .lineage-box {
+        url("Kasper.jpg");
 
-            max-width: 900px;
+    background-size: cover;
 
-            margin: auto;
+    background-position: center;
 
-            padding: 50px 40px;
+    background-attachment: fixed;
+}
 
-            text-align: center;
+.lineage-intro {
 
-            background:
+    max-width: 800px;
 
-                linear-gradient(
+    margin:
+        0 auto 45px;
+
+    text-align: center;
+
+    color: #bdb5aa;
+
+    font-size: 1.18rem;
+}
+
+.lineage-box {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 50px 40px;
+
+    text-align: center;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(23,19,17,0.97),
+            rgba(7,7,7,0.98)
+        );
+
+    border: 1px solid #49372b;
+
+    box-shadow:
+
+        0 15px 35px
+        rgba(0,0,0,0.6);
+}
+
+.lineage-box h3 {
+
+    color: #b9965a;
+
+    font-size: 1.8rem;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+.lineage-box p {
+
+    color: #aaa39a;
+
+    font-size: 1.1rem;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   FUTURE PROJECT
+========================= */
+
+.project {
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #080808,
+            #130b09,
+            #080808
+        );
+}
+
+.project-box {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 55px 40px;
+
+    text-align: center;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(31,22,18,0.95),
+            rgba(8,8,8,0.98)
+        );
+
+    border: 1px solid #49372b;
+}
+
+.project-box h2 {
+
+    font-size: 2.2rem;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+.project-box h2 span {
+
+    color: #c92329;
+}
+
+.project-box p {
+
+    color: #b5ada3;
+
+    font-size: 1.15rem;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   AVAILABLE
+========================= */
+
+.available {
+
+    text-align: center;
+
+    background-image:
+
+        linear-gradient(
+            rgba(5,5,5,0.90),
+            rgba(5,5,5,0.96)
+        ),
+
+        url("Kasper.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.available-box {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 55px 30px;
+
+    background:
+        rgba(8,8,8,0.88);
+
+    border:
+        1px solid #49372b;
+}
+
+.available-box h3 {
+
+    font-size: 2rem;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.available-box p {
+
+    color: #aaa39a;
+
+    font-size: 1.1rem;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    padding: 35px 20px;
+
+    text-align: center;
+
+    background: #040404;
+
+    border-top:
+        1px solid #30261f;
+}
+
+footer p {
+
+    color: #6f6a64;
+
+    font-size: 0.9rem;
+
+    margin: 4px;
+}
+
+footer p:last-child {
+
+    color: #806d50;
+
+    font-family:
+        "Cinzel", Georgia, serif;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .genetics-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .nav-container {
+
+        padding:
+            9px 14px;
+    }
+
+    .logo {
+
+        font-size: 0.72rem;
+
+        gap: 7px;
+    }
+
+    .logo img {
+
+        height: 36px;
+    }
+
+    .hero {
+
+        min-height: 90vh;
+    }
+
+    .hero h1 {
+
+        font-size: 3.2rem;
+
+        letter-spacing: 3px;
+    }
+
+    .hero h1 span {
+
+        letter-spacing: 4px;
+    }
+
+    .hero p {
+
+        font-size: 1.1rem;
+    }
+
+    section {
+
+        padding:
+            75px 15px;
+    }
+
+    .section-title h2 {
+
+        font-size: 2rem;
+    }
+
+    .zero-content h2 {
+
+        font-size: 2.2rem;
+    }
+
+    .project-box {
+
+        padding:
+            40px 20px;
+    }
+
+    .lineage-box {
+
+        padding:
+            40px 20px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <div class="nav-container">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+
+            <img
+                src="logo.jpg"
+                alt="Dragons Of The North Logo"
+            >
+
+            <span>
+                Dragons Of The North
+            </span>
+
+        </a>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html#story">
+                    Our Story
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#available">
+                    Available
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#genetics">
+                    Genetics
+                </a>
+            </li>
+
+            <li>
+                <a href="zero.html">
+                    Zero
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="kicker">
+            Dragons Of The North
+        </div>
+
+
+        <h1>
+
+            Zero
+
+            <span>
+                Bloodline
+            </span>
+
+        </h1>
+
+
+        <div class="divider"></div>
+
+
+        <p>
+
+            A dedicated project built around
+            genetics, quality, responsible breeding,
+            and the future of the Zero bloodline.
+
+        </p>
+
+
+        <a
+            href="#genetics"
+            class="button red-button"
+        >
+            Explore Genetics
+        </a>
+
+
+        <a
+            href="#lineage"
+            class="button outline-button"
+        >
+            Explore Lineage
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     ZERO INTRO
+========================= -->
+
+<section class="zero-intro">
+
+    <div class="container">
+
+        <div class="zero-content">
+
+            <h2>
+
+                The
+                <span>Zero</span>
+                Project
+
+            </h2>
+
+
+            <p>
+
+                The Zero project represents one of
+                the specialized genetic directions
+                within Dragons Of The North.
+
+            </p>
+
+
+            <p>
+
+                Our focus is on producing healthy,
+                quality dragons while carefully
+                documenting genetics, lineage,
+                pairings, and future generations.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     GENETICS
+========================= -->
+
+<section
+    class="genetics"
+    id="genetics"
+>
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <h2>
+                Genetics
+            </h2>
+
+            <p>
+
+                Building combinations with
+                purpose and maintaining accurate
+                genetic records.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="genetics-grid">
+
+
+            <div class="genetics-card">
+
+                <div class="symbol">
+                    ◈
+                </div>
+
+                <h3>
+                    Zero
+                </h3>
+
+                <p>
+
+                    The foundation of this project
+                    and the defining genetic focus
+                    of the bloodline.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="genetics-card">
+
+                <div class="symbol">
+                    ⚔
+                </div>
+
+                <h3>
+                    Future Pairings
+                </h3>
+
+                <p>
+
+                    Carefully selected pairings will
+                    be used to develop future
+                    generations and unique
+                    combinations.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="genetics-card">
+
+                <div class="symbol">
+                    ✦
+                </div>
 ```
