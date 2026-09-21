@@ -1,34 +1,23 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Zero Bloodline | Dragons Of The North</title>
 
-<meta
-name="description"
-content="Zero Bloodline - Dragons Of The North"
->
+<meta name="description" content="The Zero Bloodline project at Dragons Of The North.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin
->
-
-<link
-href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
-rel="stylesheet"
->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+/* =========================
+   RESET
+========================= */
 
 * {
     margin: 0;
@@ -56,20 +45,20 @@ nav,
     font-family: "Cinzel", Georgia, serif;
 }
 
+img {
+    max-width: 100%;
+}
+
 
 /* =========================
    NAVIGATION
 ========================= */
 
 nav {
-
     position: fixed;
-
     top: 0;
     left: 0;
-
     width: 100%;
-
     z-index: 1000;
 
     background: rgba(5,5,5,0.96);
@@ -81,49 +70,33 @@ nav {
 }
 
 .nav-container {
-
     max-width: 1250px;
-
     margin: auto;
-
     padding: 10px 25px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 }
 
 .logo {
-
     display: flex;
-
     align-items: center;
-
     gap: 11px;
 
     color: white;
-
     text-decoration: none;
 
     font-size: 1rem;
-
     font-weight: 700;
-
     letter-spacing: 1.5px;
-
     text-transform: uppercase;
 }
 
 .logo img {
-
     height: 48px;
-
     width: auto;
-
     object-fit: contain;
-
     border-radius: 4px;
 }
 
@@ -132,49 +105,38 @@ nav {
 }
 
 .nav-links {
-
     display: flex;
-
     gap: 28px;
-
     list-style: none;
 }
 
 .nav-links a {
-
     color: #d8d0c3;
-
     text-decoration: none;
 
     font-size: 0.82rem;
-
     letter-spacing: 1px;
 
     transition: 0.3s;
 }
 
 .nav-links a:hover {
-
     color: #c92329;
 }
 
 
 /* =========================
    HERO
-
-   KASPER IS BACKGROUND ONLY
+   KASPER = BACKGROUND ONLY
 ========================= */
 
 .hero {
-
     min-height: 100vh;
 
     position: relative;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     text-align: center;
@@ -184,60 +146,42 @@ nav {
     overflow: hidden;
 
     background-image:
-
         linear-gradient(
-            rgba(0,0,0,0.62),
+            rgba(0,0,0,0.60),
             rgba(0,0,0,0.88)
         ),
-
         url("Kasper.jpg");
 
     background-size: cover;
-
     background-position: center center;
-
     background-repeat: no-repeat;
 }
 
-
-/*
-   Dark overlay.
-
-   Kasper stays visible,
-   but the text is the focus.
-*/
-
 .hero::after {
-
     content: "";
 
     position: absolute;
-
     inset: 0;
 
     background:
-
         radial-gradient(
             ellipse at center,
             transparent 10%,
             rgba(0,0,0,0.25) 50%,
-            rgba(0,0,0,0.88) 100%
+            rgba(0,0,0,0.90) 100%
         );
 
     pointer-events: none;
 }
 
 .hero-content {
-
     position: relative;
-
     z-index: 2;
 
     max-width: 900px;
 }
 
 .kicker {
-
     color: #b9965a;
 
     font-family: "Cinzel", Georgia, serif;
@@ -255,9 +199,7 @@ nav {
 }
 
 .hero h1 {
-
-    font-size:
-        clamp(3.5rem, 9vw, 7rem);
+    font-size: clamp(3.5rem, 9vw, 7rem);
 
     line-height: 0.9;
 
@@ -268,14 +210,11 @@ nav {
     text-transform: uppercase;
 
     text-shadow:
-
         0 5px 15px black,
-
         0 10px 40px black;
 }
 
 .hero h1 span {
-
     display: block;
 
     color: #c92329;
@@ -287,20 +226,15 @@ nav {
     margin-top: 18px;
 
     text-shadow:
-
         0 0 15px black,
-
         0 0 25px rgba(201,35,41,0.6);
 }
 
 .divider {
-
     width: 180px;
-
     height: 1px;
 
     background:
-
         linear-gradient(
             90deg,
             transparent,
@@ -312,7 +246,6 @@ nav {
 }
 
 .hero p {
-
     max-width: 700px;
 
     margin: 0 auto 30px;
@@ -331,7 +264,6 @@ nav {
 ========================= */
 
 .button {
-
     display: inline-block;
 
     padding: 13px 28px;
@@ -352,11 +284,9 @@ nav {
 }
 
 .red-button {
-
     color: white;
 
     background:
-
         linear-gradient(
             135deg,
             #751317,
@@ -371,17 +301,13 @@ nav {
 }
 
 .red-button:hover {
-
-    transform:
-        translateY(-3px);
+    transform: translateY(-3px);
 
     box-shadow:
-        0 8px 25px
-        rgba(201,35,41,0.4);
+        0 8px 25px rgba(201,35,41,0.4);
 }
 
 .outline-button {
-
     color: #e2d6c5;
 
     border: 1px solid #806d50;
@@ -391,9 +317,7 @@ nav {
 }
 
 .outline-button:hover {
-
     background: #806d50;
-
     color: #080808;
 }
 
@@ -403,26 +327,20 @@ nav {
 ========================= */
 
 section {
-
     padding: 100px 20px;
 }
 
 .container {
-
     max-width: 1150px;
-
     margin: auto;
 }
 
 .section-title {
-
     text-align: center;
-
     margin-bottom: 50px;
 }
 
 .section-title h2 {
-
     font-size: 2.6rem;
 
     letter-spacing: 2px;
@@ -431,7 +349,6 @@ section {
 }
 
 .section-title h2::after {
-
     content: "";
 
     display: block;
@@ -443,7 +360,6 @@ section {
     margin: 18px auto;
 
     background:
-
         linear-gradient(
             90deg,
             transparent,
@@ -453,7 +369,6 @@ section {
 }
 
 .section-title p {
-
     color: #aaa196;
 
     max-width: 700px;
@@ -469,9 +384,7 @@ section {
 ========================= */
 
 .zero-intro {
-
     background:
-
         linear-gradient(
             180deg,
             #080808,
@@ -484,7 +397,6 @@ section {
 }
 
 .zero-content {
-
     max-width: 850px;
 
     margin: auto;
@@ -493,7 +405,6 @@ section {
 }
 
 .zero-content h2 {
-
     font-size: 2.8rem;
 
     letter-spacing: 3px;
@@ -502,12 +413,10 @@ section {
 }
 
 .zero-content h2 span {
-
     color: #c92329;
 }
 
 .zero-content p {
-
     color: #bbb3a8;
 
     font-size: 1.2rem;
@@ -521,9 +430,7 @@ section {
 ========================= */
 
 .genetics {
-
     background:
-
         radial-gradient(
             ellipse at center,
             #25100e,
@@ -532,7 +439,6 @@ section {
 }
 
 .genetics-grid {
-
     max-width: 1000px;
 
     margin: auto;
@@ -546,13 +452,11 @@ section {
 }
 
 .genetics-card {
-
     padding: 35px 25px;
 
     text-align: center;
 
     background:
-
         linear-gradient(
             145deg,
             rgba(31,22,18,0.95),
@@ -562,24 +466,18 @@ section {
     border: 1px solid #49372b;
 
     box-shadow:
-
-        0 15px 35px
-        rgba(0,0,0,0.6);
+        0 15px 35px rgba(0,0,0,0.6);
 
     transition: 0.3s;
 }
 
 .genetics-card:hover {
+    transform: translateY(-5px);
 
-    transform:
-        translateY(-5px);
-
-    border-color:
-        #806d50;
+    border-color: #806d50;
 }
 
 .genetics-card .symbol {
-
     font-size: 2.5rem;
 
     color: #b9965a;
@@ -588,7 +486,6 @@ section {
 }
 
 .genetics-card h3 {
-
     font-size: 1.4rem;
 
     letter-spacing: 2px;
@@ -597,7 +494,6 @@ section {
 }
 
 .genetics-card p {
-
     color: #958d84;
 
     font-size: 1rem;
@@ -605,21 +501,18 @@ section {
 
 
 /* =========================
-   LINEAGE
-
-   KASPER BACKGROUND
-   NO KASPER SPOTLIGHT
+   ZERO FOUNDATION
+   KASPER = BACKGROUND ONLY
 ========================= */
 
 .lineage {
+    position: relative;
 
     background-image:
-
         linear-gradient(
-            rgba(8,8,8,0.91),
-            rgba(15,9,8,0.96)
+            rgba(8,8,8,0.88),
+            rgba(15,9,8,0.95)
         ),
-
         url("Kasper.jpg");
 
     background-size: cover;
@@ -630,74 +523,171 @@ section {
 }
 
 .lineage-intro {
-
     max-width: 800px;
 
     margin:
-        0 auto 45px;
+        0 auto 50px;
 
     text-align: center;
 
     color: #bdb5aa;
 
-    font-size: 1.18rem;
-}
-
-.lineage-box {
-
-    max-width: 900px;
-
-    margin: auto;
-
-    padding: 50px 40px;
-
-    text-align: center;
-
-    background:
-
-        linear-gradient(
-            145deg,
-            rgba(23,19,17,0.97),
-            rgba(7,7,7,0.98)
-        );
-
-    border: 1px solid #49372b;
-
-    box-shadow:
-
-        0 15px 35px
-        rgba(0,0,0,0.6);
-}
-
-.lineage-box h3 {
-
-    color: #b9965a;
-
-    font-size: 1.8rem;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 20px;
-}
-
-.lineage-box p {
-
-    color: #aaa39a;
-
-    font-size: 1.1rem;
-
-    margin-bottom: 15px;
+    font-size: 1.2rem;
 }
 
 
 /* =========================
-   FUTURE PROJECT
+   PARENTS
+========================= */
+
+.parents {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 40px;
+}
+
+.parent {
+    padding: 18px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(23,19,17,0.98),
+            rgba(7,7,7,0.99)
+        );
+
+    border:
+        1px solid #49372b;
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,0.70);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.parent:hover {
+    transform: translateY(-6px);
+
+    border-color:
+        #9b7844;
+}
+
+.parent-photo {
+    position: relative;
+
+    overflow: hidden;
+
+    border:
+        1px solid #806d50;
+
+    background: #050505;
+
+    margin-bottom: 22px;
+}
+
+.parent-photo img {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease;
+}
+
+.parent:hover .parent-photo img {
+    transform: scale(1.03);
+}
+
+.parent-role {
+    color: #b9965a;
+
+    font-family: "Cinzel", Georgia, serif;
+
+    font-size: 0.72rem;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 8px;
+}
+
+.parent h3 {
+    font-size: 2.4rem;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+.parent-description {
+    max-width: 500px;
+
+    margin: auto;
+
+    color: #aaa39a;
+
+    font-size: 1.08rem;
+}
+
+.parent-divider {
+    width: 110px;
+
+    height: 1px;
+
+    margin: 22px auto;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #9b7844,
+            transparent
+        );
+}
+
+.parent-genetics {
+    color: #8e877e;
+
+    font-size: 0.95rem;
+
+    line-height: 1.5;
+}
+
+.parent-genetics strong {
+    color: #b9965a;
+
+    font-family: "Cinzel", Georgia, serif;
+
+    font-size: 0.72rem;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   PROJECT
 ========================= */
 
 .project {
-
     background:
-
         linear-gradient(
             180deg,
             #080808,
@@ -707,7 +697,6 @@ section {
 }
 
 .project-box {
-
     max-width: 900px;
 
     margin: auto;
@@ -717,18 +706,20 @@ section {
     text-align: center;
 
     background:
-
         linear-gradient(
             145deg,
             rgba(31,22,18,0.95),
             rgba(8,8,8,0.98)
         );
 
-    border: 1px solid #49372b;
+    border:
+        1px solid #49372b;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.6);
 }
 
 .project-box h2 {
-
     font-size: 2.2rem;
 
     letter-spacing: 2px;
@@ -737,12 +728,10 @@ section {
 }
 
 .project-box h2 span {
-
     color: #c92329;
 }
 
 .project-box p {
-
     color: #b5ada3;
 
     font-size: 1.15rem;
@@ -756,16 +745,13 @@ section {
 ========================= */
 
 .available {
-
     text-align: center;
 
     background-image:
-
         linear-gradient(
             rgba(5,5,5,0.90),
             rgba(5,5,5,0.96)
         ),
-
         url("Kasper.jpg");
 
     background-size: cover;
@@ -774,7 +760,6 @@ section {
 }
 
 .available-box {
-
     max-width: 850px;
 
     margin: auto;
@@ -789,7 +774,6 @@ section {
 }
 
 .available-box h3 {
-
     font-size: 2rem;
 
     letter-spacing: 2px;
@@ -798,7 +782,6 @@ section {
 }
 
 .available-box p {
-
     color: #aaa39a;
 
     font-size: 1.1rem;
@@ -812,7 +795,6 @@ section {
 ========================= */
 
 footer {
-
     padding: 35px 20px;
 
     text-align: center;
@@ -824,7 +806,6 @@ footer {
 }
 
 footer p {
-
     color: #6f6a64;
 
     font-size: 0.9rem;
@@ -833,7 +814,6 @@ footer p {
 }
 
 footer p:last-child {
-
     color: #806d50;
 
     font-family:
@@ -859,82 +839,81 @@ footer p:last-child {
         grid-template-columns: 1fr;
     }
 
+    .parents {
+        grid-template-columns: 1fr;
+
+        max-width: 600px;
+    }
 }
 
 @media (max-width: 600px) {
 
     .nav-container {
-
         padding:
             9px 14px;
     }
 
     .logo {
-
         font-size: 0.72rem;
 
         gap: 7px;
     }
 
     .logo img {
-
         height: 36px;
     }
 
     .hero {
-
         min-height: 90vh;
     }
 
     .hero h1 {
-
         font-size: 3.2rem;
 
         letter-spacing: 3px;
     }
 
     .hero h1 span {
-
         letter-spacing: 4px;
     }
 
     .hero p {
-
         font-size: 1.1rem;
     }
 
     section {
-
         padding:
             75px 15px;
     }
 
     .section-title h2 {
-
         font-size: 2rem;
     }
 
     .zero-content h2 {
-
         font-size: 2.2rem;
     }
 
     .project-box {
-
         padding:
             40px 20px;
     }
 
-    .lineage-box {
+    .parent {
+        padding: 12px;
+    }
 
+    .parent h3 {
+        font-size: 2rem;
+    }
+
+    .available-box {
         padding:
             40px 20px;
     }
-
 }
 
 </style>
-
 </head>
 
 
@@ -949,10 +928,7 @@ footer p:last-child {
 
     <div class="nav-container">
 
-        <a
-            href="index.html"
-            class="logo"
-        >
+        <a href="index.html" class="logo">
 
             <img
                 src="logo.jpg"
@@ -999,7 +975,6 @@ footer p:last-child {
 </nav>
 
 
-
 <!-- =========================
      HERO
 ========================= -->
@@ -1012,29 +987,20 @@ footer p:last-child {
             Dragons Of The North
         </div>
 
-
         <h1>
-
             Zero
-
             <span>
                 Bloodline
             </span>
-
         </h1>
-
 
         <div class="divider"></div>
 
-
         <p>
-
             A dedicated project built around
             genetics, quality, responsible breeding,
             and the future of the Zero bloodline.
-
         </p>
-
 
         <a
             href="#genetics"
@@ -1043,18 +1009,16 @@ footer p:last-child {
             Explore Genetics
         </a>
 
-
         <a
             href="#lineage"
             class="button outline-button"
         >
-            Explore Lineage
+            Meet The Parents
         </a>
 
     </div>
 
 </header>
-
 
 
 <!-- =========================
@@ -1068,30 +1032,22 @@ footer p:last-child {
         <div class="zero-content">
 
             <h2>
-
                 The
                 <span>Zero</span>
                 Project
-
             </h2>
 
-
             <p>
-
                 The Zero project represents one of
                 the specialized genetic directions
                 within Dragons Of The North.
-
             </p>
 
-
             <p>
-
                 Our focus is on producing healthy,
                 quality dragons while carefully
                 documenting genetics, lineage,
                 pairings, and future generations.
-
             </p>
 
         </div>
@@ -1099,7 +1055,6 @@ footer p:last-child {
     </div>
 
 </section>
-
 
 
 <!-- =========================
@@ -1113,7 +1068,6 @@ footer p:last-child {
 
     <div class="container">
 
-
         <div class="section-title">
 
             <h2>
@@ -1121,15 +1075,11 @@ footer p:last-child {
             </h2>
 
             <p>
-
-                Building combinations with
-                purpose and maintaining accurate
-                genetic records.
-
+                Building combinations with purpose
+                and maintaining accurate genetic records.
             </p>
 
         </div>
-
 
 
         <div class="genetics-grid">
@@ -1146,15 +1096,11 @@ footer p:last-child {
                 </h3>
 
                 <p>
-
-                    The foundation of this project
-                    and the defining genetic focus
-                    of the bloodline.
-
+                    The defining genetic focus
+                    of this specialized bloodline.
                 </p>
 
             </div>
-
 
 
             <div class="genetics-card">
@@ -1168,16 +1114,12 @@ footer p:last-child {
                 </h3>
 
                 <p>
-
-                    Carefully selected pairings will
-                    be used to develop future
-                    generations and unique
-                    combinations.
-
+                    Carefully selected pairings
+                    will help develop future
+                    generations and combinations.
                 </p>
 
             </div>
-
 
 
             <div class="genetics-card">
@@ -1185,4 +1127,278 @@ footer p:last-child {
                 <div class="symbol">
                     ✦
                 </div>
-```
+
+                <h3>
+                    Quality
+                </h3>
+
+                <p>
+                    Health, structure, temperament,
+                    and responsible breeding remain
+                    central to the project.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ZERO FOUNDATION
+     MINNIE + MIKEY
+========================= -->
+
+<section
+    class="lineage"
+    id="lineage"
+>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Zero Foundation
+            </h2>
+
+            <p>
+                Meet Minnie and Mikey,
+                the featured parents of the
+                Zero project.
+            </p>
+
+        </div>
+
+
+        <div class="lineage-intro">
+
+            Every bloodline has a beginning.
+
+            <br><br>
+
+            Minnie and Mikey are featured here
+            as the foundation parents connected
+            to the Zero project at
+            Dragons Of The North.
+
+        </div>
+
+
+        <div class="parents">
+
+
+            <!-- MINNIE -->
+
+            <div class="parent">
+
+                <div class="parent-photo">
+
+                    <img
+                        src="Minnie.jpg"
+                        alt="Minnie - Zero Foundation Parent"
+                    >
+
+                </div>
+
+                <div class="parent-role">
+                    Zero Foundation Parent
+                </div>
+
+                <h3>
+                    Minnie
+                </h3>
+
+                <p class="parent-description">
+
+                    Minnie is one of the featured
+                    foundation dragons behind the
+                    Zero project.
+
+                </p>
+
+                <div class="parent-divider"></div>
+
+                <p class="parent-genetics">
+
+                    <strong>
+                        Role
+                    </strong>
+
+                    <br>
+
+                    Foundation Parent
+
+                </p>
+
+            </div>
+
+
+            <!-- MIKEY -->
+
+            <div class="parent">
+
+                <div class="parent-photo">
+
+                    <img
+                        src="Mikey.jpg"
+                        alt="Mikey - Zero Foundation Parent"
+                    >
+
+                </div>
+
+                <div class="parent-role">
+                    Zero Foundation Parent
+                </div>
+
+                <h3>
+                    Mikey
+                </h3>
+
+                <p class="parent-description">
+
+                    Mikey is one of the featured
+                    foundation dragons connected
+                    to the Zero project.
+
+                </p>
+
+                <div class="parent-divider"></div>
+
+                <p class="parent-genetics">
+
+                    <strong>
+                        Role
+                    </strong>
+
+                    <br>
+
+                    Foundation Parent
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FUTURE PROJECT
+========================= -->
+
+<section class="project">
+
+    <div class="container">
+
+        <div class="project-box">
+
+            <h2>
+                Building The
+                <span>Legacy</span>
+            </h2>
+
+            <p>
+                The Zero project is about more than
+                producing a particular look.
+            </p>
+
+            <p>
+                Each generation will be selected
+                with attention to genetics, health,
+                structure, temperament, and overall
+                quality.
+            </p>
+
+            <p>
+                As the project develops, this page
+                will document future pairings,
+                offspring, genetics, and the dragons
+                that help shape the bloodline.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     AVAILABLE
+========================= -->
+
+<section
+    class="available"
+    id="available"
+>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Zero Dragons
+            </h2>
+
+            <p>
+                Future Zero dragons will be
+                listed here as they become available.
+            </p>
+
+        </div>
+
+
+        <div class="available-box">
+
+            <h3>
+                The Next Generation
+            </h3>
+
+            <p>
+                We are continuing to develop the
+                Zero project and will update this
+                page as future dragons become
+                available.
+            </p>
+
+            <a
+                href="index.html#available"
+                class="button red-button"
+            >
+                View Available Dragons
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        © 2026 Dragons Of The North
+    </p>
+
+    <p>
+        Zero Bloodline Project
+    </p>
+
+</footer>
+
+
+</body>
+</html>
