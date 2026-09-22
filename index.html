@@ -143,7 +143,6 @@
         background-repeat: no-repeat;
     }
 
-    /* Dark cinematic edges */
     .hero::before {
         content: "";
         position: absolute;
@@ -160,7 +159,6 @@
         pointer-events: none;
     }
 
-    /* Subtle red atmospheric glow */
     .hero::after {
         content: "";
         position: absolute;
@@ -567,6 +565,20 @@
 
         box-shadow:
             0 8px 25px rgba(120,20,20,0.25);
+    }
+
+    /* Clickable genetics cards */
+
+    .genetic-card.clickable {
+        cursor: pointer;
+    }
+
+    .genetic-card.clickable > a {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
 
     /* =========================
@@ -1032,7 +1044,7 @@
 
             <!-- ZERO -->
 
-            <div class="genetic-card zero">
+            <div class="genetic-card zero clickable">
 
                 <a href="zero.html">
 
@@ -1070,42 +1082,22 @@
             </div>
 
 
-            <!-- DARK SERIES -->
-
-            <div class="genetic-card">
-
-                <div>
-
-                    <h3>
-                        Dark Series
-                    </h3>
-
-                    <p>
-                        Deep dark colors and black-based
-                        breeding projects.
-                    </p>
-
-                </div>
-
-            </div>
-
-
             <!-- HYPO -->
 
-            <div class="genetic-card">
+            <div class="genetic-card clickable">
 
-                <div>
+                <a href="hypo.html">
 
                     <h3>
                         Hypo
                     </h3>
 
                     <p>
-                        Hypomelanistic genetics and
-                        future pairings.
+                        Hypo Pattern genetics and
+                        available babies.
                     </p>
 
-                </div>
+                </a>
 
             </div>
 
