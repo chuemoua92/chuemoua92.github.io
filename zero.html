@@ -1,82 +1,33 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <title>Zero Bloodline | Dragons Of The North</title>
 
-    <title>
-        Zero Bloodline | Dragons Of The North
-    </title>
-
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@300;400;500;600&display=swap"
-          rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-
-        /* =========================
-           GLOBAL
-        ========================= */
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-
         html {
             scroll-behavior: smooth;
         }
 
-
         body {
-            background: #080808;
-            color: #e8e2d9;
-            font-family:
-                "Cormorant Garamond",
-                Georgia,
-                serif;
-            font-size: 18px;
-            line-height: 1.6;
+            background: #070707;
+            color: #e8e1d5;
+            font-family: "Cormorant Garamond", serif;
+            overflow-x: hidden;
         }
-
-
-        h1,
-        h2,
-        h3,
-        h4,
-        nav {
-            font-family:
-                "Cinzel",
-                Georgia,
-                serif;
-        }
-
-
-        p {
-            color: #aaa39a;
-        }
-
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-        }
-
 
         /* =========================
            NAVIGATION
@@ -87,605 +38,295 @@
             top: 0;
             left: 0;
             width: 100%;
-            z-index: 1000;
-
+            height: 82px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-
-            padding: 15px 5%;
-
-            background: rgba(5,5,5,0.94);
-
-            border-bottom:
-                1px solid #382d25;
-
-            backdrop-filter: blur(8px);
+            padding: 0 6%;
+            background: rgba(5, 5, 5, 0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(201, 166, 92, 0.25);
+            z-index: 1000;
         }
-
 
         .nav-logo {
             display: flex;
             align-items: center;
-            gap: 12px;
-
-            color: #e5d5bd;
-
             text-decoration: none;
-
-            font-size: 0.9rem;
-            font-weight: 600;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
         }
 
-
         .nav-logo img {
-            width: 45px;
-            height: 45px;
-
+            width: 58px;
+            height: 58px;
             object-fit: contain;
         }
 
-
         .nav-links {
             display: flex;
-            align-items: center;
-            gap: 30px;
+            gap: 35px;
             list-style: none;
         }
 
-
         .nav-links a {
-            color: #bcb4a9;
+            color: #d8c8a5;
             text-decoration: none;
-
-            font-size: 0.7rem;
-            letter-spacing: 1.8px;
-
+            font-family: "Cinzel", serif;
+            font-size: 13px;
+            letter-spacing: 2px;
             text-transform: uppercase;
-
-            transition: color 0.3s ease;
+            transition: 0.3s ease;
         }
-
 
         .nav-links a:hover {
-            color: #d3a55c;
+            color: #ffffff;
         }
-
 
         /* =========================
            HERO
         ========================= */
 
-        .zero-hero {
-            min-height: 720px;
-
+        .hero {
+            min-height: 100vh;
             position: relative;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             text-align: center;
-
-            padding: 140px 20px 100px;
-
+            padding: 120px 20px 80px;
             overflow: hidden;
-
-            background:
-                linear-gradient(
-                    rgba(5,5,5,0.72),
-                    rgba(5,5,5,0.88)
-                ),
-                url("Kasper.jpg")
-                center / cover
-                no-repeat;
         }
 
-
-        .zero-hero::before {
+        .hero::before {
             content: "";
-
             position: absolute;
             inset: 0;
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.42),
+                    rgba(0, 0, 0, 0.86)
+                ),
+                url("Kasper.jpg") center center / cover no-repeat;
+            z-index: -2;
+            transform: scale(1.03);
+        }
 
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
             background:
                 radial-gradient(
                     circle at center,
-                    transparent 15%,
-                    rgba(0,0,0,0.55) 75%,
-                    rgba(0,0,0,0.9)
+                    transparent 20%,
+                    rgba(0, 0, 0, 0.75) 100%
                 );
+            z-index: -1;
         }
 
-
-        .zero-hero-content {
-            position: relative;
-            z-index: 2;
-
-            max-width: 850px;
+        .hero-content {
+            max-width: 1000px;
         }
 
-
-        .eyebrow {
-            color: #b9965a;
-
-            font-family:
-                "Cinzel",
-                Georgia,
-                serif;
-
-            font-size: 0.7rem;
+        .hero-small {
+            font-family: "Cinzel", serif;
+            font-size: 14px;
             letter-spacing: 6px;
-
+            color: #c9a65c;
             text-transform: uppercase;
-
-            margin-bottom: 15px;
+            margin-bottom: 22px;
         }
 
-
-        .zero-hero h1 {
-            color: #eee7dc;
-
-            font-size:
-                clamp(3.5rem, 8vw, 7rem);
-
-            line-height: 1;
-
-            letter-spacing: 6px;
-
-            text-transform: uppercase;
-
+        .hero h1 {
+            font-family: "Cinzel", serif;
+            font-size: clamp(48px, 8vw, 100px);
+            line-height: 0.95;
+            letter-spacing: 4px;
+            color: #f1e8d7;
             text-shadow:
-                0 5px 25px rgba(0,0,0,0.8);
+                0 4px 20px rgba(0, 0, 0, 0.8),
+                0 0 40px rgba(201, 166, 92, 0.15);
         }
 
-
-        .zero-hero h1 span {
-            display: block;
-            color: #c92329;
+        .hero h2 {
+            font-family: "Cinzel", serif;
+            font-size: clamp(24px, 4vw, 42px);
+            font-weight: 500;
+            letter-spacing: 8px;
+            color: #c9a65c;
+            margin-top: 18px;
+            text-transform: uppercase;
         }
 
-
-        .hero-divider {
-            width: 100px;
-            height: 1px;
-
-            background: #9b7844;
-
-            margin: 30px auto;
+        .hero p {
+            max-width: 650px;
+            margin: 30px auto 0;
+            font-size: 22px;
+            line-height: 1.5;
+            color: #d7d0c4;
         }
-
-
-        .zero-hero p {
-            max-width: 700px;
-
-            margin: auto;
-
-            color: #c4bdb3;
-
-            font-size: 1.25rem;
-        }
-
 
         .hero-buttons {
+            margin-top: 42px;
             display: flex;
-
             justify-content: center;
-
-            gap: 15px;
-
-            margin-top: 35px;
-
+            gap: 18px;
             flex-wrap: wrap;
         }
 
-
-        .hero-button {
-            padding: 13px 24px;
-
-            color: #eee;
-
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border: 1px solid #c9a65c;
+            color: #e8dfcc;
             text-decoration: none;
-
-            border: 1px solid #806d50;
-
-            font-family:
-                "Cinzel",
-                Georgia,
-                serif;
-
-            font-size: 0.68rem;
-
-            letter-spacing: 1.5px;
-
+            font-family: "Cinzel", serif;
+            font-size: 12px;
+            letter-spacing: 2px;
             text-transform: uppercase;
-
-            transition: all 0.3s ease;
+            transition: 0.3s ease;
         }
 
-
-        .hero-button.primary {
-            background:
-                linear-gradient(
-                    135deg,
-                    #751317,
-                    #b71f25
-                );
-
-            border-color: #c23c41;
+        .btn:hover {
+            background: #c9a65c;
+            color: #090909;
         }
-
-
-        .hero-button:hover {
-            transform: translateY(-3px);
-            border-color: #c9a66d;
-        }
-
 
         /* =========================
-           SECTION
+           GENERAL SECTIONS
         ========================= */
 
         section {
-            padding: 100px 0;
+            padding: 110px 7%;
         }
 
-
-        .section-title {
+        .section-heading {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 65px;
         }
 
-
-        .section-title h2 {
-            color: #e8e1d7;
-
-            font-size:
-                clamp(2rem, 5vw, 3.3rem);
-
-            letter-spacing: 3px;
-
+        .section-heading .eyebrow {
+            color: #c9a65c;
+            font-family: "Cinzel", serif;
+            font-size: 12px;
+            letter-spacing: 4px;
             text-transform: uppercase;
+            margin-bottom: 14px;
         }
 
-
-        .section-title h2 span {
-            color: #c92329;
+        .section-heading h2 {
+            font-family: "Cinzel", serif;
+            font-size: clamp(32px, 5vw, 56px);
+            color: #eee6d8;
+            letter-spacing: 2px;
         }
 
-
-        .section-title p {
-            max-width: 650px;
-
-            margin: 15px auto 0;
-
-            font-size: 1.15rem;
+        .section-heading p {
+            max-width: 700px;
+            margin: 20px auto 0;
+            font-size: 20px;
+            line-height: 1.5;
+            color: #bdb5a8;
         }
-
 
         /* =========================
-           INTRO
+           FOUNDATION PARENTS
         ========================= */
 
-        .zero-intro {
+        .foundation {
             background:
                 linear-gradient(
-                    180deg,
-                    #090909,
-                    #110d0b
+                    rgba(7, 7, 7, 0.94),
+                    rgba(7, 7, 7, 0.97)
                 );
         }
 
-
-        .intro-content {
-            max-width: 900px;
-
+        .parent-grid {
+            max-width: 1150px;
             margin: auto;
-
-            text-align: center;
-        }
-
-
-        .intro-content h3 {
-            color: #c5a774;
-
-            font-size: 1.4rem;
-
-            letter-spacing: 2px;
-
-            margin-bottom: 20px;
-
-            text-transform: uppercase;
-        }
-
-
-        .intro-content p {
-            font-size: 1.25rem;
-
-            margin-bottom: 20px;
-        }
-
-
-        /* =========================
-           GENETICS
-        ========================= */
-
-        .zero-genetics {
-            background: #080808;
-
-            border-top:
-                1px solid #30261e;
-
-            border-bottom:
-                1px solid #30261e;
-        }
-
-
-        .genetics-grid {
             display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 25px;
-
-            max-width: 1000px;
-
-            margin: auto;
-        }
-
-
-        .genetic-card {
-            padding: 35px 28px;
-
-            text-align: center;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #191310,
-                    #080808
-                );
-
-            border:
-                1px solid #49372b;
-
-            transition:
-                transform 0.3s ease,
-                border-color 0.3s ease;
-        }
-
-
-        .genetic-card:hover {
-            transform: translateY(-5px);
-
-            border-color: #9b7844;
-        }
-
-
-        .genetic-icon {
-            width: 65px;
-            height: 65px;
-
-            margin: 0 auto 20px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            border:
-                1px solid #806d50;
-
-            color: #c92329;
-
-            font-family:
-                "Cinzel",
-                Georgia,
-                serif;
-
-            font-size: 1.2rem;
-        }
-
-
-        .genetic-card h3 {
-            color: #e1d7c9;
-
-            font-size: 1.2rem;
-
-            letter-spacing: 2px;
-
-            margin-bottom: 12px;
-
-            text-transform: uppercase;
-        }
-
-
-        /* =========================
-           ZERO FOUNDATION
-        ========================= */
-
-        .zero-foundation {
-            position: relative;
-
-            overflow: hidden;
-
-            background:
-                linear-gradient(
-                    rgba(8,8,8,0.92),
-                    rgba(8,8,8,0.95)
-                ),
-                url("Kasper.jpg")
-                center / cover
-                fixed
-                no-repeat;
-        }
-
-
-        .parents-grid {
-            max-width: 950px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
+            grid-template-columns: repeat(2, 1fr);
             gap: 35px;
         }
 
-
         .parent-card {
-            background:
-                rgba(10,10,10,0.9);
-
-            border:
-                1px solid #49372b;
-
+            position: relative;
             overflow: hidden;
-
-            box-shadow:
-                0 20px 45px rgba(0,0,0,0.6);
+            border: 1px solid rgba(201, 166, 92, 0.3);
+            background: #0d0d0d;
         }
 
-
-        .parent-photo {
-            height: 390px;
+        .parent-image {
+            height: 520px;
             overflow: hidden;
         }
 
-
-        .parent-photo img {
+        .parent-image img {
             width: 100%;
             height: 100%;
-
             object-fit: cover;
-
             display: block;
-
-            transition:
-                transform 0.6s ease;
+            transition: transform 0.7s ease;
         }
 
-
-        .parent-card:hover
-        .parent-photo img {
+        .parent-card:hover .parent-image img {
             transform: scale(1.04);
         }
 
-
         .parent-info {
-            padding: 25px;
-
+            padding: 28px 30px 32px;
             text-align: center;
         }
 
-
-        .parent-info .label {
-            color: #b9965a;
-
-            font-family:
-                "Cinzel",
-                Georgia,
-                serif;
-
-            font-size: 0.65rem;
-
-            letter-spacing: 3px;
-
-            text-transform: uppercase;
-        }
-
-
         .parent-info h3 {
-            color: #eee5d8;
-
-            font-size: 2rem;
-
-            letter-spacing: 3px;
-
-            margin:
-                5px 0 10px;
-
-            text-transform: uppercase;
+            font-family: "Cinzel", serif;
+            color: #e7d5ae;
+            font-size: 28px;
+            letter-spacing: 2px;
         }
 
+        .parent-info .role {
+            color: #c9a65c;
+            font-family: "Cinzel", serif;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-top: 7px;
+        }
 
         .parent-info p {
-            font-size: 1.05rem;
+            color: #aaa398;
+            font-size: 18px;
+            line-height: 1.45;
+            margin-top: 15px;
         }
-
 
         /* =========================
-           SMALL AVAILABLE ZERO DISPLAY
+           AVAILABLE DRAGONS
         ========================= */
 
-        .zero-available {
-            background:
-                linear-gradient(
-                    180deg,
-                    #080808,
-                    #120c0a,
-                    #080808
-                );
-
-            border-top:
-                1px solid #30261e;
-
-            border-bottom:
-                1px solid #30261e;
+        .available {
+            background: #090909;
         }
-
 
         .zero-available-grid {
-            max-width: 850px;
-
+            max-width: 1050px;
             margin: auto;
-
             display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 30px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
         }
-
 
         .mini-dragon-card {
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(27,20,17,0.98),
-                    rgba(7,7,7,0.99)
-                );
-
-            border:
-                1px solid #49372b;
-
-            box-shadow:
-                0 15px 35px rgba(0,0,0,0.65);
-
+            background: #101010;
+            border: 1px solid rgba(201, 166, 92, 0.3);
             overflow: hidden;
-
-            transition:
-                transform 0.3s ease,
-                border-color 0.3s ease;
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
-
 
         .mini-dragon-card:hover {
-            transform:
-                translateY(-5px);
-
-            border-color:
-                #9b7844;
+            transform: translateY(-5px);
+            border-color: rgba(201, 166, 92, 0.65);
         }
-
 
         /* =========================
            THREE PHOTO GALLERY
@@ -693,492 +334,217 @@
 
         .mini-dragon-gallery {
             display: grid;
-
-            grid-template-columns:
-                2fr 1fr;
-
-            grid-template-rows:
-                1fr 1fr;
-
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 1fr 1fr;
             height: 300px;
-
             gap: 4px;
-
-            background:
-                #050505;
+            background: #050505;
         }
-
 
         .mini-main-photo {
-            grid-row:
-                1 / 3;
-
+            grid-row: 1 / 3;
             overflow: hidden;
         }
-
 
         .mini-side-photo {
             overflow: hidden;
         }
 
-
         .mini-dragon-gallery img {
             width: 100%;
             height: 100%;
-
             object-fit: cover;
-
             display: block;
-
-            transition:
-                transform 0.5s ease;
+            transition: transform 0.5s ease;
         }
-
 
         .mini-dragon-gallery img:hover {
-            transform:
-                scale(1.06);
+            transform: scale(1.06);
         }
 
-
-        /* =========================
-           STATUS
-        ========================= */
-
-        .mini-photo-wrapper {
-            position: relative;
+        .mini-info {
+            padding: 25px 28px 30px;
         }
 
-
-        .mini-status {
-            position: absolute;
-
-            top: 14px;
-            right: 14px;
-
-            padding:
-                6px 12px;
-
-            color:
-                #eee5d7;
-
-            background:
-                rgba(5,5,5,0.88);
-
-            border:
-                1px solid #806d50;
-
-            font-family:
-                "Cinzel",
-                Georgia,
-                serif;
-
-            font-size:
-                0.62rem;
-
-            letter-spacing:
-                2px;
-
-            text-transform:
-                uppercase;
-
-            z-index:
-                5;
+        .mini-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 15px;
         }
 
-
-        /* =========================
-           DRAGON INFO
-        ========================= */
-
-        .mini-dragon-info {
-            padding:
-                22px 25px 25px;
-
-            text-align:
-                center;
+        .mini-info h3 {
+            font-family: "Cinzel", serif;
+            font-size: 27px;
+            color: #eee5d4;
+            letter-spacing: 2px;
         }
 
-
-        .mini-label {
-            color:
-                #b9965a;
-
-            font-family:
-                "Cinzel",
-                Georgia,
-                serif;
-
-            font-size:
-                0.62rem;
-
-            letter-spacing:
-                3px;
-
-            text-transform:
-                uppercase;
-
-            margin-bottom:
-                5px;
+        .status {
+            border: 1px solid #c9a65c;
+            color: #c9a65c;
+            padding: 6px 10px;
+            font-family: "Cinzel", serif;
+            font-size: 9px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
         }
 
-
-        .mini-dragon-info h3 {
-            color:
-                #eee5d8;
-
-            font-size:
-                2rem;
-
-            letter-spacing:
-                3px;
-
-            margin-bottom:
-                18px;
-
-            text-transform:
-                uppercase;
+        .dragon-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 9px 20px;
+            margin: 18px 0 24px;
         }
 
-
-        .mini-details {
-            display:
-                grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            border-top:
-                1px solid #30261f;
-
-            border-bottom:
-                1px solid #30261f;
-
-            margin-bottom:
-                20px;
+        .detail {
+            display: flex;
+            flex-direction: column;
         }
 
-
-        .mini-details div {
-            padding:
-                12px 5px;
-
-            border-right:
-                1px solid #30261f;
+        .detail-label {
+            color: #827a6f;
+            font-family: "Cinzel", serif;
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
-
-        .mini-details div:last-child {
-            border-right:
-                none;
+        .detail-value {
+            color: #d8d0c2;
+            font-size: 17px;
+            margin-top: 2px;
         }
 
-
-        .mini-details span {
-            display:
-                block;
-
-            color:
-                #806d50;
-
-            font-family:
-                "Cinzel",
-                Georgia,
-                serif;
-
-            font-size:
-                0.55rem;
-
-            letter-spacing:
-                1.5px;
-
-            text-transform:
-                uppercase;
-
-            margin-bottom:
-                3px;
+        .message-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 13px 18px;
+            border: 1px solid #c9a65c;
+            color: #dfd5c3;
+            text-decoration: none;
+            font-family: "Cinzel", serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: 0.3s ease;
         }
 
-
-        .mini-details strong {
-            color:
-                #ded7ce;
-
-            font-size:
-                0.88rem;
-
-            font-weight:
-                600;
+        .message-btn:hover {
+            background: #c9a65c;
+            color: #090909;
         }
-
-
-        /* =========================
-           MESSAGE BUTTON
-        ========================= */
-
-        .mini-message-button {
-            display:
-                block;
-
-            width:
-                100%;
-
-            padding:
-                12px 15px;
-
-            color:
-                white;
-
-            text-decoration:
-                none;
-
-            font-family:
-                "Cinzel",
-                Georgia,
-                serif;
-
-            font-size:
-                0.68rem;
-
-            font-weight:
-                600;
-
-            letter-spacing:
-                1.3px;
-
-            text-transform:
-                uppercase;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #751317,
-                    #c92329,
-                    #741317
-                );
-
-            border:
-                1px solid #d94a4f;
-
-            transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease;
-        }
-
-
-        .mini-message-button:hover {
-            transform:
-                translateY(-2px);
-
-            box-shadow:
-                0 6px 20px
-                rgba(201,35,41,0.4);
-        }
-
 
         /* =========================
            FUTURE PROJECT
         ========================= */
 
-        .future-project {
-            position:
-                relative;
+        .future {
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+            border-top: 1px solid rgba(201, 166, 92, 0.15);
+            border-bottom: 1px solid rgba(201, 166, 92, 0.15);
+        }
 
-            overflow:
-                hidden;
-
+        .future::before {
+            content: "";
+            position: absolute;
+            inset: 0;
             background:
                 linear-gradient(
-                    145deg,
-                    #130d0b,
-                    #080808
-                );
+                    rgba(5, 5, 5, 0.87),
+                    rgba(5, 5, 5, 0.95)
+                ),
+                url("Kasper.jpg") center / cover no-repeat;
+            z-index: -1;
         }
-
 
         .future-content {
-            max-width:
-                850px;
-
-            margin:
-                auto;
-
-            text-align:
-                center;
-
-            padding:
-                45px;
-
-            border:
-                1px solid #49372b;
-
-            background:
-                rgba(10,10,10,0.65);
-
-            box-shadow:
-                0 20px 45px rgba(0,0,0,0.5);
+            max-width: 850px;
+            margin: auto;
         }
 
-
-        .future-content h3 {
-            color:
-                #c5a774;
-
-            font-size:
-                1.6rem;
-
-            letter-spacing:
-                3px;
-
-            margin-bottom:
-                15px;
-
-            text-transform:
-                uppercase;
+        .future h2 {
+            font-family: "Cinzel", serif;
+            color: #eee5d5;
+            font-size: clamp(32px, 5vw, 58px);
+            letter-spacing: 2px;
         }
 
-
-        .future-content p {
-            font-size:
-                1.2rem;
-
-            margin-bottom:
-                15px;
+        .future p {
+            margin-top: 24px;
+            color: #b9b0a2;
+            font-size: 21px;
+            line-height: 1.55;
         }
-
-
-        .future-note {
-            color:
-                #806d50;
-
-            font-family:
-                "Cinzel",
-                Georgia,
-                serif;
-
-            font-size:
-                0.7rem;
-
-            letter-spacing:
-                2px;
-
-            text-transform:
-                uppercase;
-        }
-
 
         /* =========================
            END SECTION
         ========================= */
 
-        .zero-end {
-            min-height:
-                430px;
+        .end-section {
+            min-height: 55vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
 
-            display:
-                flex;
-
-            align-items:
-                center;
-
-            text-align:
-                center;
-
-            position:
-                relative;
-
+        .end-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
             background:
                 linear-gradient(
-                    rgba(5,5,5,0.82),
-                    rgba(5,5,5,0.92)
+                    rgba(5, 5, 5, 0.58),
+                    rgba(5, 5, 5, 0.88)
                 ),
-                url("Kasper.jpg")
-                center / cover
-                no-repeat;
+                url("Kasper.jpg") center / cover no-repeat;
+            z-index: -1;
         }
 
-
-        .zero-end-content {
-            max-width:
-                750px;
-
-            margin:
-                auto;
+        .end-section h2 {
+            font-family: "Cinzel", serif;
+            font-size: clamp(34px, 6vw, 70px);
+            letter-spacing: 3px;
+            color: #eee7d8;
         }
 
-
-        .zero-end-content h2 {
-            color:
-                #eee7dc;
-
-            font-size:
-                2.8rem;
-
-            letter-spacing:
-                4px;
-
-            margin-bottom:
-                15px;
-
-            text-transform:
-                uppercase;
+        .end-section p {
+            max-width: 650px;
+            margin: 20px auto 0;
+            font-size: 21px;
+            color: #c6bdae;
+            line-height: 1.5;
         }
-
-
-        .zero-end-content p {
-            font-size:
-                1.2rem;
-
-            margin-bottom:
-                25px;
-        }
-
 
         /* =========================
            FOOTER
         ========================= */
 
         footer {
-            padding:
-                40px 20px;
-
-            text-align:
-                center;
-
-            background:
-                #050505;
-
-            border-top:
-                1px solid #30261e;
+            padding: 35px 20px;
+            text-align: center;
+            background: #050505;
+            border-top: 1px solid rgba(201, 166, 92, 0.2);
         }
-
-
-        footer h3 {
-            color:
-                #d3a55c;
-
-            font-size:
-                1rem;
-
-            letter-spacing:
-                3px;
-
-            text-transform:
-                uppercase;
-
-            margin-bottom:
-                8px;
-        }
-
 
         footer p {
-            color:
-                #706a63;
-
-            font-size:
-                0.9rem;
+            color: #777168;
+            font-size: 15px;
         }
 
+        footer strong {
+            color: #b7a477;
+            font-family: "Cinzel", serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
 
         /* =========================
            MOBILE
@@ -1186,293 +552,175 @@
 
         @media (max-width: 850px) {
 
-            .nav-links {
-                gap: 15px;
+            nav {
+                height: 72px;
+                padding: 0 4%;
             }
 
+            .nav-logo img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .nav-links {
+                gap: 14px;
+            }
 
             .nav-links a {
-                font-size:
-                    0.58rem;
+                font-size: 9px;
+                letter-spacing: 1px;
             }
 
-
-            .genetics-grid {
-                grid-template-columns:
-                    1fr;
+            section {
+                padding: 85px 5%;
             }
 
-
-            .parents-grid {
-                grid-template-columns:
-                    1fr;
-
-                max-width:
-                    550px;
-            }
-
-
+            .parent-grid,
             .zero-available-grid {
-                grid-template-columns:
-                    1fr;
-
-                max-width:
-                    500px;
+                grid-template-columns: 1fr;
             }
 
+            .parent-image {
+                height: 450px;
+            }
         }
-
 
         @media (max-width: 600px) {
 
-            body {
-                font-size:
-                    17px;
+            .hero {
+                min-height: 90vh;
             }
 
-
-            nav {
-                padding:
-                    10px 15px;
+            .hero-small {
+                font-size: 10px;
+                letter-spacing: 4px;
             }
 
-
-            .nav-logo span {
-                display:
-                    none;
+            .hero h1 {
+                font-size: 44px;
             }
 
-
-            .nav-logo img {
-                width:
-                    40px;
-
-                height:
-                    40px;
+            .hero h2 {
+                font-size: 20px;
+                letter-spacing: 5px;
             }
 
-
-            .nav-links {
-                gap:
-                    12px;
+            .hero p {
+                font-size: 18px;
             }
 
-
-            .nav-links a {
-                font-size:
-                    0.5rem;
-
-                letter-spacing:
-                    1px;
+            .hero-buttons {
+                gap: 10px;
             }
 
-
-            .zero-hero {
-                min-height:
-                    650px;
-
-                padding:
-                    120px 20px 80px;
+            .btn {
+                padding: 12px 20px;
+                font-size: 9px;
             }
 
-
-            .zero-hero h1 {
-                font-size:
-                    3rem;
-
-                letter-spacing:
-                    3px;
+            .section-heading {
+                margin-bottom: 45px;
             }
 
-
-            .zero-hero p {
-                font-size:
-                    1.05rem;
+            .section-heading h2 {
+                font-size: 32px;
             }
 
-
-            section {
-                padding:
-                    75px 0;
+            .section-heading p {
+                font-size: 18px;
             }
 
-
-            .section-title {
-                margin-bottom:
-                    40px;
+            .parent-image {
+                height: 390px;
             }
-
-
-            .section-title h2 {
-                font-size:
-                    2rem;
-
-                letter-spacing:
-                    2px;
-            }
-
-
-            .parent-photo {
-                height:
-                    330px;
-            }
-
-
-            .future-content {
-                padding:
-                    30px 20px;
-            }
-
-
-            .zero-end-content h2 {
-                font-size:
-                    2rem;
-            }
-
-
-            /* Mobile gallery */
 
             .mini-dragon-gallery {
-                height:
-                    300px;
+                height: 300px;
             }
 
-
-            .mini-dragon-info {
-                padding:
-                    20px 15px;
+            .mini-top {
+                align-items: flex-start;
             }
 
-
-            .mini-dragon-info h3 {
-                font-size:
-                    1.8rem;
+            .mini-info h3 {
+                font-size: 24px;
             }
-
         }
-
 
         @media (max-width: 400px) {
 
             .nav-links {
-                gap:
-                    8px;
+                gap: 8px;
             }
-
 
             .nav-links a {
-                font-size:
-                    0.45rem;
+                font-size: 8px;
             }
 
+            .hero h1 {
+                font-size: 38px;
+            }
 
             .mini-dragon-gallery {
-                height:
-                    270px;
+                height: 270px;
             }
 
+            .dragon-details {
+                grid-template-columns: 1fr;
+            }
         }
-
     </style>
-
 </head>
 
-
 <body>
-
 
     <!-- =========================
          NAVIGATION
     ========================= -->
 
     <nav>
-
-        <a href="index.html"
-           class="nav-logo">
-
-            <img src="logo.jpg"
-                 alt="Dragons Of The North Logo">
-
-            <span>
-                Dragons Of The North
-            </span>
-
+        <a href="index.html" class="nav-logo">
+            <img src="logo.jpg" alt="Dragons Of The North Logo">
         </a>
 
-
         <ul class="nav-links">
-
-            <li>
-                <a href="index.html#story">
-                    Story
-                </a>
-            </li>
-
-            <li>
-                <a href="index.html#available">
-                    Dragons
-                </a>
-            </li>
-
-            <li>
-                <a href="index.html#genetics">
-                    Genetics
-                </a>
-            </li>
-
-            <li>
-                <a href="zero.html">
-                    Zero Project
-                </a>
-            </li>
-
+            <li><a href="index.html#story">Story</a></li>
+            <li><a href="index.html#available">Dragons</a></li>
+            <li><a href="index.html#genetics">Genetics</a></li>
+            <li><a href="zero.html">Zero</a></li>
         </ul>
-
     </nav>
-
 
 
     <!-- =========================
          HERO
     ========================= -->
 
-    <header class="zero-hero">
+    <header class="hero">
 
-        <div class="zero-hero-content">
+        <div class="hero-content">
 
-            <div class="eyebrow">
+            <div class="hero-small">
                 Dragons Of The North
             </div>
 
+            <h1>Zero</h1>
 
-            <h1>
-                Zero
-                <span>Bloodline</span>
-            </h1>
-
-
-            <div class="hero-divider"></div>
-
+            <h2>Bloodline</h2>
 
             <p>
-                A dedicated project focused on producing
-                high-quality Zero bearded dragons while
-                preserving health, structure, color and
-                strong genetics for future generations.
+                A carefully developed Zero bloodline built around quality,
+                structure, genetics, and the future of Dragons Of The North.
             </p>
-
 
             <div class="hero-buttons">
 
-                <a href="#genetics"
-                   class="hero-button primary">
-                    Explore Genetics
+                <a href="#parents" class="btn">
+                    Meet The Parents
                 </a>
 
-
-                <a href="#foundation"
-                   class="hero-button">
-                    Meet The Parents
+                <a href="#available-zero" class="btn">
+                    View Available Dragons
                 </a>
 
             </div>
@@ -1482,621 +730,338 @@
     </header>
 
 
-
     <!-- =========================
-         ZERO INTRO
+         FOUNDATION PARENTS
     ========================= -->
 
-    <section class="zero-intro"
-             id="zero">
+    <section class="foundation" id="parents">
 
-        <div class="container">
+        <div class="section-heading">
 
-            <div class="section-title">
+            <div class="eyebrow">
+                Zero Foundation
+            </div>
 
-                <h2>
-                    The
-                    <span>Zero Project</span>
-                </h2>
+            <h2>The Parents</h2>
 
-                <p>
-                    Building something special takes time.
-                </p>
+            <p>
+                The foundation of this Zero project begins with Minnie and Mikey,
+                two dragons selected to help build the next generation of
+                Dragons Of The North.
+            </p>
+
+        </div>
+
+
+        <div class="parent-grid">
+
+            <!-- Minnie -->
+
+            <div class="parent-card">
+
+                <div class="parent-image">
+                    <img src="Minnie.jpg" alt="Minnie">
+                </div>
+
+                <div class="parent-info">
+
+                    <h3>Minnie</h3>
+
+                    <div class="role">
+                        Foundation Female
+                    </div>
+
+                    <p>
+                        One of the foundation females behind the Zero bloodline.
+                        Minnie plays an important role in the future development
+                        of this project.
+                    </p>
+
+                </div>
 
             </div>
 
 
-            <div class="intro-content">
+            <!-- Mikey -->
 
-                <h3>
-                    More Than Just A Morph
-                </h3>
+            <div class="parent-card">
 
+                <div class="parent-image">
+                    <img src="Mikey.jpg" alt="Mikey">
+                </div>
 
-                <p>
-                    The goal of the Dragons Of The North
-                    Zero project is not simply to produce
-                    another Zero dragon. The focus is on
-                    developing healthy, structurally sound
-                    dragons with quality genetics that can
-                    contribute to the future of the project.
-                </p>
+                <div class="parent-info">
 
+                    <h3>Mikey</h3>
 
-                <p>
-                    Every pairing is selected with the
-                    long-term direction of the bloodline
-                    in mind.
-                </p>
+                    <div class="role">
+                        Foundation Male
+                    </div>
+
+                    <p>
+                        The foundation male paired with Minnie to produce the
+                        next generation of Zero offspring.
+                    </p>
+
+                </div>
 
             </div>
 
         </div>
 
     </section>
-
-
-
-    <!-- =========================
-         GENETICS
-    ========================= -->
-
-    <section class="zero-genetics"
-             id="genetics">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <h2>
-                    Zero
-                    <span>Genetics</span>
-                </h2>
-
-                <p>
-                    The foundation behind the project.
-                </p>
-
-            </div>
-
-
-            <div class="genetics-grid">
-
-
-                <div class="genetic-card">
-
-                    <div class="genetic-icon">
-                        Z
-                    </div>
-
-                    <h3>
-                        Zero
-                    </h3>
-
-                    <p>
-                        Working with Zero genetics
-                        to develop clean, quality
-                        examples of the morph.
-                    </p>
-
-                </div>
-
-
-
-                <div class="genetic-card">
-
-                    <div class="genetic-icon">
-                        +
-                    </div>
-
-                    <h3>
-                        Future Pairings
-                    </h3>
-
-                    <p>
-                        Carefully selected pairings
-                        will help expand the project
-                        while maintaining quality.
-                    </p>
-
-                </div>
-
-
-
-                <div class="genetic-card">
-
-                    <div class="genetic-icon">
-                        ★
-                    </div>
-
-                    <h3>
-                        Quality
-                    </h3>
-
-                    <p>
-                        Health, structure and genetics
-                        remain the priority with every
-                        generation produced.
-                    </p>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         ZERO FOUNDATION
-    ========================= -->
-
-    <section class="zero-foundation"
-             id="foundation">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <h2>
-                    Zero
-                    <span>Foundation</span>
-                </h2>
-
-                <p>
-                    The parents helping build the future
-                    of the Dragons Of The North Zero project.
-                </p>
-
-            </div>
-
-
-            <div class="parents-grid">
-
-
-                <!-- MINNIE -->
-
-                <div class="parent-card">
-
-                    <div class="parent-photo">
-
-                        <img src="Minnie.jpg"
-                             alt="Minnie - Zero Parent">
-
-                    </div>
-
-
-                    <div class="parent-info">
-
-                        <div class="label">
-                            Zero Foundation
-                        </div>
-
-                        <h3>
-                            Minnie
-                        </h3>
-
-                        <p>
-                            One of the foundation parents
-                            behind the Dragons Of The North
-                            Zero project.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- MIKEY -->
-
-                <div class="parent-card">
-
-                    <div class="parent-photo">
-
-                        <img src="Mikey.jpg"
-                             alt="Mikey - Zero Parent">
-
-                    </div>
-
-
-                    <div class="parent-info">
-
-                        <div class="label">
-                            Zero Foundation
-                        </div>
-
-                        <h3>
-                            Mikey
-                        </h3>
-
-                        <p>
-                            A key part of the foundation
-                            pairing helping shape the
-                            future of the Zero project.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
 
 
     <!-- =========================
          AVAILABLE ZERO DRAGONS
     ========================= -->
 
-    <section class="zero-available"
-             id="zero-available">
+    <section class="available" id="available-zero">
 
-        <div class="container">
+        <div class="section-heading">
 
-            <div class="section-title">
-
-                <h2>
-                    Available
-                    <span>Zero Dragons</span>
-                </h2>
-
-                <p>
-                    A limited selection currently available
-                    from the Zero project.
-                </p>
-
+            <div class="eyebrow">
+                Current Availability
             </div>
 
+            <h2>Available Zero Dragons</h2>
 
-            <div class="zero-available-grid">
+            <p>
+                A small selection of offspring currently available from
+                Dragons Of The North.
+            </p>
 
-
-                <!-- =========================
-                     PINK
-                ========================= -->
-
-                <div class="mini-dragon-card">
-
-
-                    <div class="mini-photo-wrapper">
-
-                        <div class="mini-dragon-gallery">
+        </div>
 
 
-                            <div class="mini-main-photo">
-
-                                <img
-                                    src="Pink1.jpg"
-                                    alt="Pink Hypo Zero Bearded Dragon - Photo 1"
-                                >
-
-                            </div>
+        <div class="zero-available-grid">
 
 
-                            <div class="mini-side-photo">
+            <!-- =====================
+                 PINK
+            ====================== -->
 
-                                <img
-                                    src="Pink2.jpg"
-                                    alt="Pink Hypo Zero Bearded Dragon - Photo 2"
-                                >
+            <div class="mini-dragon-card">
 
-                            </div>
+                <div class="mini-dragon-gallery">
 
+                    <div class="mini-main-photo">
+                        <img src="Pink1.jpg" alt="Pink Hypo Zero">
+                    </div>
 
-                            <div class="mini-side-photo">
+                    <div class="mini-side-photo">
+                        <img src="Pink2.jpg" alt="Pink Hypo Zero Side View">
+                    </div>
 
-                                <img
-                                    src="Pink3.jpg"
-                                    alt="Pink Hypo Zero Bearded Dragon - Photo 3"
-                                >
+                    <div class="mini-side-photo">
+                        <img src="Pink3.jpg" alt="Pink Hypo Zero Additional View">
+                    </div>
 
-                            </div>
-
-
-                        </div>
+                </div>
 
 
-                        <div class="mini-status">
+                <div class="mini-info">
+
+                    <div class="mini-top">
+
+                        <h3>Pink</h3>
+
+                        <div class="status">
                             Available
                         </div>
 
                     </div>
 
 
-                    <div class="mini-dragon-info">
+                    <div class="dragon-details">
 
-                        <div class="mini-label">
-                            Zero Project
+                        <div class="detail">
+                            <span class="detail-label">
+                                Sex
+                            </span>
+
+                            <span class="detail-value">
+                                Unknown
+                            </span>
                         </div>
 
 
-                        <h3>
-                            Pink
-                        </h3>
+                        <div class="detail">
+                            <span class="detail-label">
+                                Morph
+                            </span>
 
-
-                        <div class="mini-details">
-
-
-                            <div>
-
-                                <span>
-                                    Sex
-                                </span>
-
-                                <strong>
-                                    Unknown
-                                </strong>
-
-                            </div>
-
-
-                            <div>
-
-                                <span>
-                                    Morph
-                                </span>
-
-                                <strong>
-                                    Hypo Zero
-                                </strong>
-
-                            </div>
-
-
-                            <div>
-
-                                <span>
-                                    DOB
-                                </span>
-
-                                <strong>
-                                    08/19/2026
-                                </strong>
-
-                            </div>
-
-
+                            <span class="detail-value">
+                                Hypo Zero
+                            </span>
                         </div>
 
 
-                        <a
-                            href="https://www.facebook.com/profile.php?id=61579598882265"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="mini-message-button"
-                        >
-                            Message Me for More Info
-                        </a>
+                        <div class="detail">
+                            <span class="detail-label">
+                                DOB
+                            </span>
 
+                            <span class="detail-value">
+                                08/19/2026
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="https://www.facebook.com/profile.php?id=61579598882265"
+                        target="_blank"
+                        class="message-btn"
+                    >
+                        Message Me For More Info
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================
+                 WHITE
+            ====================== -->
+
+            <div class="mini-dragon-card">
+
+                <div class="mini-dragon-gallery">
+
+                    <div class="mini-main-photo">
+                        <img src="White1.jpg" alt="White Hypo Zero">
+                    </div>
+
+                    <div class="mini-side-photo">
+                        <img src="White2.jpg" alt="White Hypo Zero Side View">
+                    </div>
+
+                    <div class="mini-side-photo">
+                        <img src="White3.jpg" alt="White Hypo Zero Additional View">
                     </div>
 
                 </div>
 
 
+                <div class="mini-info">
 
-                <!-- =========================
-                     WHITE
-                ========================= -->
+                    <div class="mini-top">
 
-                <div class="mini-dragon-card">
+                        <h3>White</h3>
 
-
-                    <div class="mini-photo-wrapper">
-
-                        <div class="mini-dragon-gallery">
-
-
-                            <div class="mini-main-photo">
-
-                                <img
-                                    src="White1.jpg"
-                                    alt="White Hypo Zero Bearded Dragon - Photo 1"
-                                >
-
-                            </div>
-
-
-                            <div class="mini-side-photo">
-
-                                <img
-                                    src="White2.jpg"
-                                    alt="White Hypo Zero Bearded Dragon - Photo 2"
-                                >
-
-                            </div>
-
-
-                            <div class="mini-side-photo">
-
-                                <img
-                                    src="White3.jpg"
-                                    alt="White Hypo Zero Bearded Dragon - Photo 3"
-                                >
-
-                            </div>
-
-
-                        </div>
-
-
-                        <div class="mini-status">
+                        <div class="status">
                             Available
                         </div>
 
                     </div>
 
 
-                    <div class="mini-dragon-info">
+                    <div class="dragon-details">
 
-                        <div class="mini-label">
-                            Zero Project
+                        <div class="detail">
+                            <span class="detail-label">
+                                Sex
+                            </span>
+
+                            <span class="detail-value">
+                                Unknown
+                            </span>
                         </div>
 
 
-                        <h3>
-                            White
-                        </h3>
+                        <div class="detail">
+                            <span class="detail-label">
+                                Morph
+                            </span>
 
-
-                        <div class="mini-details">
-
-
-                            <div>
-
-                                <span>
-                                    Sex
-                                </span>
-
-                                <strong>
-                                    Unknown
-                                </strong>
-
-                            </div>
-
-
-                            <div>
-
-                                <span>
-                                    Morph
-                                </span>
-
-                                <strong>
-                                    Hypo Zero
-                                </strong>
-
-                            </div>
-
-
-                            <div>
-
-                                <span>
-                                    DOB
-                                </span>
-
-                                <strong>
-                                    08/19/2026
-                                </strong>
-
-                            </div>
-
-
+                            <span class="detail-value">
+                                Hypo Zero
+                            </span>
                         </div>
 
 
-                        <a
-                            href="https://www.facebook.com/profile.php?id=61579598882265"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="mini-message-button"
-                        >
-                            Message Me for More Info
-                        </a>
+                        <div class="detail">
+                            <span class="detail-label">
+                                DOB
+                            </span>
+
+                            <span class="detail-value">
+                                08/19/2026
+                            </span>
+                        </div>
 
                     </div>
 
+
+                    <a
+                        href="https://www.facebook.com/profile.php?id=61579598882265"
+                        target="_blank"
+                        class="message-btn"
+                    >
+                        Message Me For More Info
+                    </a>
+
                 </div>
 
-
             </div>
+
 
         </div>
 
     </section>
-
 
 
     <!-- =========================
          FUTURE PROJECT
     ========================= -->
 
-    <section class="future-project"
-             id="future">
+    <section class="future">
 
-        <div class="container">
+        <div class="future-content">
 
-            <div class="section-title">
+            <div class="section-heading" style="margin-bottom: 0;">
 
-                <h2>
-                    The
-                    <span>Future</span>
-                </h2>
-
-                <p>
-                    The project is just beginning.
-                </p>
-
-            </div>
-
-
-            <div class="future-content">
-
-                <h3>
-                    Building The Next Generation
-                </h3>
-
-
-                <p>
-                    Future pairings will continue to
-                    explore what can be accomplished
-                    with the Zero gene while maintaining
-                    the health and quality that Dragons
-                    Of The North strives for.
-                </p>
-
-
-                <div class="future-note">
-                    Quality First • Genetics Second • Future Always
+                <div class="eyebrow">
+                    The Road Ahead
                 </div>
+
+                <h2>Future Generations</h2>
+
+                <p>
+                    The goal is not simply to produce Zero dragons.
+                    It is to continue developing healthy, quality animals
+                    while building a bloodline that can be carried forward
+                    for generations.
+                </p>
 
             </div>
 
         </div>
 
     </section>
-
 
 
     <!-- =========================
          END SECTION
     ========================= -->
 
-    <section class="zero-end">
+    <section class="end-section">
 
-        <div class="container">
+        <div>
 
-            <div class="zero-end-content">
+            <h2>Dragons Of The North</h2>
 
-                <h2>
-                    Dragons Of The North
-                </h2>
-
-
-                <p>
-                    Follow the journey as the Zero project
-                    continues to grow.
-                </p>
-
-
-                <a href="index.html"
-                   class="hero-button primary">
-                    Return To Main Site
-                </a>
-
-            </div>
+            <p>
+                Built with patience. Developed with purpose.
+                The journey continues.
+            </p>
 
         </div>
 
     </section>
-
 
 
     <!-- =========================
@@ -2105,25 +1070,16 @@
 
     <footer>
 
-        <h3>
-            Dragons Of The North
-        </h3>
-
-
         <p>
-            Quality Dragons. Strong Genetics.
-            A Better Future.
+            <strong>DRAGONS OF THE NORTH</strong>
         </p>
 
-
-        <p style="margin-top: 10px;">
-            © 2026 Dragons Of The North
+        <p style="margin-top: 8px;">
+            Quality. Genetics. Legacy.
         </p>
 
     </footer>
 
-
 </body>
-
 </html>
 ```
