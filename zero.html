@@ -1,174 +1,548 @@
 ```html
-<!-- =========================
-     ZERO DRAGONS FOR SALE
-========================= -->
+<!DOCTYPE html>
+<html lang="en">
 
-<section class="zero-sale" id="zero-sale">
+<head>
 
-    <div class="container">
+    <meta charset="UTF-8">
 
-        <div class="section-title">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-            <h2>
-                Zero Dragons
-                <span>Available</span>
-            </h2>
+    <title>
+        Zero Bloodline | Dragons Of The North
+    </title>
 
-            <p>
-                A limited selection of Zero dragons
-                from Dragons Of The North.
-            </p>
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-        </div>
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-
-        <div class="sale-grid">
-
-
-            <!-- =========================
-                 PINK
-            ========================= -->
-
-            <div class="sale-card">
-
-                <div class="sale-title">
-
-                    <div class="sale-label">
-                        Zero Dragon
-                    </div>
-
-                    <h3>
-                        Pink
-                    </h3>
-
-                    <p>
-                        Available
-                    </p>
-
-                </div>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
 
 
-                <div class="sale-gallery">
+    <style>
 
-                    <div class="sale-photo">
-                        <img
-                            src="Pink1.jpg"
-                            alt="Pink Zero Dragon"
-                        >
-                    </div>
+        /* =========================
+           GLOBAL
+        ========================= */
 
-                    <div class="sale-photo">
-                        <img
-                            src="Pink2.jpg"
-                            alt="Pink Zero Dragon"
-                        >
-                    </div>
-
-                    <div class="sale-photo">
-                        <img
-                            src="Pink3.jpg"
-                            alt="Pink Zero Dragon"
-                        >
-                    </div>
-
-                </div>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
 
-                <div class="sale-info">
-
-                    <p>
-                        This is the same dragon shown
-                        from multiple views.
-                    </p>
-
-                    <a
-                        href="https://www.facebook.com/profile.php?id=61579598882265"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="button red-button"
-                    >
-                        Message Me for More Info
-                    </a>
-
-                </div>
-
-            </div>
+        html {
+            scroll-behavior: smooth;
+        }
 
 
+        body {
 
-            <!-- =========================
-                 WHITE
-            ========================= -->
+            background:
+                #080808;
 
-            <div class="sale-card">
+            color:
+                #e8e2d9;
 
-                <div class="sale-title">
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
 
-                    <div class="sale-label">
-                        Zero Dragon
-                    </div>
+            font-size:
+                18px;
 
-                    <h3>
-                        White
-                    </h3>
-
-                    <p>
-                        Available
-                    </p>
-
-                </div>
+            line-height:
+                1.6;
+        }
 
 
-                <div class="sale-gallery">
+        h1,
+        h2,
+        h3,
+        h4,
+        nav {
 
-                    <div class="sale-photo">
-                        <img
-                            src="White1.jpg"
-                            alt="White Zero Dragon"
-                        >
-                    </div>
-
-                    <div class="sale-photo">
-                        <img
-                            src="White2.jpg"
-                            alt="White Zero Dragon"
-                        >
-                    </div>
-
-                    <div class="sale-photo">
-                        <img
-                            src="White3.jpg"
-                            alt="White Zero Dragon"
-                        >
-                    </div>
-
-                </div>
+            font-family:
+                "Cinzel",
+                Georgia,
+                serif;
+        }
 
 
-                <div class="sale-info">
-
-                    <p>
-                        This is the same dragon shown
-                        from multiple views.
-                    </p>
-
-                    <a
-                        href="https://www.facebook.com/profile.php?id=61579598882265"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="button red-button"
-                    >
-                        Message Me for More Info
-                    </a>
-
-                </div>
-
-            </div>
+        p {
+            color:
+                #aaa39a;
+        }
 
 
-        </div>
+        .container {
 
-    </div>
+            width:
+                90%;
 
-</section>
+            max-width:
+                1200px;
+
+            margin:
+                auto;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+
+            position:
+                fixed;
+
+            top:
+                0;
+
+            left:
+                0;
+
+            width:
+                100%;
+
+            z-index:
+                1000;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            padding:
+                15px 5%;
+
+            background:
+                rgba(5,5,5,0.94);
+
+            border-bottom:
+                1px solid #382d25;
+
+            backdrop-filter:
+                blur(8px);
+        }
+
+
+        .nav-logo {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                12px;
+
+            color:
+                #e5d5bd;
+
+            text-decoration:
+                none;
+
+            font-size:
+                0.9rem;
+
+            font-weight:
+                600;
+
+            letter-spacing:
+                2px;
+
+            text-transform:
+                uppercase;
+        }
+
+
+        .nav-logo img {
+
+            width:
+                45px;
+
+            height:
+                45px;
+
+            object-fit:
+                contain;
+        }
+
+
+        .nav-links {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                30px;
+
+            list-style:
+                none;
+        }
+
+
+        .nav-links a {
+
+            color:
+                #bcb4a9;
+
+            text-decoration:
+                none;
+
+            font-size:
+                0.7rem;
+
+            letter-spacing:
+                1.8px;
+
+            text-transform:
+                uppercase;
+
+            transition:
+                color 0.3s ease;
+        }
+
+
+        .nav-links a:hover {
+
+            color:
+                #d3a55c;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .zero-hero {
+
+            min-height:
+                720px;
+
+            position:
+                relative;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            text-align:
+                center;
+
+            padding:
+                140px 20px 100px;
+
+            overflow:
+                hidden;
+
+            background:
+
+                linear-gradient(
+                    rgba(5,5,5,0.72),
+                    rgba(5,5,5,0.88)
+                ),
+
+                url("Kasper.jpg")
+                center / cover
+                no-repeat;
+        }
+
+
+        .zero-hero::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            inset:
+                0;
+
+            background:
+
+                radial-gradient(
+                    circle at center,
+                    transparent 15%,
+                    rgba(0,0,0,0.55) 75%,
+                    rgba(0,0,0,0.9)
+                );
+        }
+
+
+        .zero-hero-content {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            max-width:
+                850px;
+        }
+
+
+        .eyebrow {
+
+            color:
+                #b9965a;
+
+            font-family:
+                "Cinzel",
+                Georgia,
+                serif;
+
+            font-size:
+                0.7rem;
+
+            letter-spacing:
+                6px;
+
+            text-transform:
+                uppercase;
+
+            margin-bottom:
+                15px;
+        }
+
+
+        .zero-hero h1 {
+
+            color:
+                #eee7dc;
+
+            font-size:
+                clamp(3.5rem, 8vw, 7rem);
+
+            line-height:
+                1;
+
+            letter-spacing:
+                6px;
+
+            text-transform:
+                uppercase;
+
+            text-shadow:
+                0 5px 25px rgba(0,0,0,0.8);
+        }
+
+
+        .zero-hero h1 span {
+
+            display:
+                block;
+
+            color:
+                #c92329;
+        }
+
+
+        .hero-divider {
+
+            width:
+                100px;
+
+            height:
+                1px;
+
+            background:
+                #9b7844;
+
+            margin:
+                30px auto;
+        }
+
+
+        .zero-hero p {
+
+            max-width:
+                700px;
+
+            margin:
+                auto;
+
+            color:
+                #c4bdb3;
+
+            font-size:
+                1.25rem;
+        }
+
+
+        .hero-buttons {
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            gap:
+                15px;
+
+            margin-top:
+                35px;
+
+            flex-wrap:
+                wrap;
+        }
+
+
+        .hero-button {
+
+            padding:
+                13px 24px;
+
+            color:
+                #eee;
+
+            text-decoration:
+                none;
+
+            border:
+                1px solid #806d50;
+
+            font-family:
+                "Cinzel",
+                Georgia,
+                serif;
+
+            font-size:
+                0.68rem;
+
+            letter-spacing:
+                1.5px;
+
+            text-transform:
+                uppercase;
+
+            transition:
+                all 0.3s ease;
+        }
+
+
+        .hero-button.primary {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #751317,
+                    #b71f25
+                );
+
+            border-color:
+                #c23c41;
+        }
+
+
+        .hero-button:hover {
+
+            transform:
+                translateY(-3px);
+
+            border-color:
+                #c9a66d;
+        }
+
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        section {
+
+            padding:
+                100px 0;
+        }
+
+
+        .section-title {
+
+            text-align:
+                center;
+
+            margin-bottom:
+                60px;
+        }
+
+
+        .section-title h2 {
+
+            color:
+                #e8e1d7;
+
+            font-size:
+                clamp(2rem, 5vw, 3.3rem);
+
+            letter-spacing:
+                3px;
+
+            text-transform:
+                uppercase;
+        }
+
+
+        .section-title h2 span {
+
+            color:
+                #c92329;
+        }
+
+
+        .section-title p {
+
+            max-width:
+                650px;
+
+            margin:
+                15px auto 0;
+
+            font-size:
+                1.15rem;
+        }
+
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .zero-intro {
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #090909,
+                    #110d0b
+                );
+        }
+
+
+        .intro-content {
+
+            max-width:
 ```
