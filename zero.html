@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Zero Bloodline | Dragons Of The North</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,9 +28,7 @@
             overflow-x: hidden;
         }
 
-        /* =========================
-           NAVIGATION
-        ========================= */
+        /* NAVIGATION */
 
         nav {
             position: fixed;
@@ -78,12 +75,10 @@
         }
 
         .nav-links a:hover {
-            color: #ffffff;
+            color: #fff;
         }
 
-        /* =========================
-           HERO
-        ========================= */
+        /* HERO */
 
         .hero {
             min-height: 100vh;
@@ -114,12 +109,11 @@
             content: "";
             position: absolute;
             inset: 0;
-            background:
-                radial-gradient(
-                    circle at center,
-                    transparent 20%,
-                    rgba(0, 0, 0, 0.75) 100%
-                );
+            background: radial-gradient(
+                circle at center,
+                transparent 20%,
+                rgba(0, 0, 0, 0.75) 100%
+            );
             z-index: -1;
         }
 
@@ -191,9 +185,7 @@
             color: #090909;
         }
 
-        /* =========================
-           GENERAL SECTIONS
-        ========================= */
+        /* GENERAL SECTIONS */
 
         section {
             padding: 110px 7%;
@@ -228,16 +220,13 @@
             color: #bdb5a8;
         }
 
-        /* =========================
-           FOUNDATION PARENTS
-        ========================= */
+        /* FOUNDATION PARENTS */
 
         .foundation {
-            background:
-                linear-gradient(
-                    rgba(7, 7, 7, 0.94),
-                    rgba(7, 7, 7, 0.97)
-                );
+            background: linear-gradient(
+                rgba(7, 7, 7, 0.94),
+                rgba(7, 7, 7, 0.97)
+            );
         }
 
         .parent-grid {
@@ -300,9 +289,7 @@
             margin-top: 15px;
         }
 
-        /* =========================
-           AVAILABLE DRAGONS
-        ========================= */
+        /* ZERO OFFSPRING */
 
         .available {
             background: #090909;
@@ -328,9 +315,7 @@
             border-color: rgba(201, 166, 92, 0.65);
         }
 
-        /* =========================
-           THREE PHOTO GALLERY
-        ========================= */
+        /* THREE-PHOTO GALLERY */
 
         .mini-dragon-gallery {
             display: grid;
@@ -389,6 +374,15 @@
             font-size: 9px;
             letter-spacing: 1.5px;
             text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        /* REHOMED STATUS */
+
+        .status.rehomed {
+            color: #e6d4ad;
+            background: rgba(100, 75, 35, 0.28);
+            border-color: #a98a52;
         }
 
         .dragon-details {
@@ -417,29 +411,21 @@
             margin-top: 2px;
         }
 
-        .message-btn {
+        .rehomed-note {
             display: block;
             width: 100%;
             text-align: center;
             padding: 13px 18px;
-            border: 1px solid #c9a65c;
-            color: #dfd5c3;
-            text-decoration: none;
+            border: 1px solid #75613c;
+            background: rgba(100, 75, 35, 0.16);
+            color: #c9b68f;
             font-family: "Cinzel", serif;
             font-size: 10px;
             letter-spacing: 2px;
             text-transform: uppercase;
-            transition: 0.3s ease;
         }
 
-        .message-btn:hover {
-            background: #c9a65c;
-            color: #090909;
-        }
-
-        /* =========================
-           FUTURE PROJECT
-        ========================= */
+        /* FUTURE PROJECT */
 
         .future {
             position: relative;
@@ -453,12 +439,10 @@
             content: "";
             position: absolute;
             inset: 0;
-            background:
-                linear-gradient(
-                    rgba(5, 5, 5, 0.87),
-                    rgba(5, 5, 5, 0.95)
-                ),
-                url("Kasper.jpg") center / cover no-repeat;
+            background: linear-gradient(
+                rgba(5, 5, 5, 0.87),
+                rgba(5, 5, 5, 0.95)
+            ), url("Kasper.jpg") center / cover no-repeat;
             z-index: -1;
         }
 
@@ -481,9 +465,7 @@
             line-height: 1.55;
         }
 
-        /* =========================
-           END SECTION
-        ========================= */
+        /* END SECTION */
 
         .end-section {
             min-height: 55vh;
@@ -499,12 +481,10 @@
             content: "";
             position: absolute;
             inset: 0;
-            background:
-                linear-gradient(
-                    rgba(5, 5, 5, 0.58),
-                    rgba(5, 5, 5, 0.88)
-                ),
-                url("Kasper.jpg") center / cover no-repeat;
+            background: linear-gradient(
+                rgba(5, 5, 5, 0.58),
+                rgba(5, 5, 5, 0.88)
+            ), url("Kasper.jpg") center / cover no-repeat;
             z-index: -1;
         }
 
@@ -523,9 +503,7 @@
             line-height: 1.5;
         }
 
-        /* =========================
-           FOOTER
-        ========================= */
+        /* FOOTER */
 
         footer {
             padding: 35px 20px;
@@ -546,12 +524,9 @@
             letter-spacing: 2px;
         }
 
-        /* =========================
-           MOBILE
-        ========================= */
+        /* TABLET */
 
         @media (max-width: 850px) {
-
             nav {
                 height: 72px;
                 padding: 0 4%;
@@ -585,8 +560,9 @@
             }
         }
 
-        @media (max-width: 600px) {
+        /* MOBILE */
 
+        @media (max-width: 600px) {
             .hero {
                 min-height: 90vh;
             }
@@ -648,7 +624,6 @@
         }
 
         @media (max-width: 400px) {
-
             .nav-links {
                 gap: 8px;
             }
@@ -674,9 +649,7 @@
 
 <body>
 
-    <!-- =========================
-         NAVIGATION
-    ========================= -->
+    <!-- NAVIGATION -->
 
     <nav>
         <a href="index.html" class="nav-logo">
@@ -691,21 +664,12 @@
         </ul>
     </nav>
 
-
-    <!-- =========================
-         HERO
-    ========================= -->
+    <!-- HERO -->
 
     <header class="hero">
-
         <div class="hero-content">
-
-            <div class="hero-small">
-                Dragons Of The North
-            </div>
-
+            <div class="hero-small">Dragons Of The North</div>
             <h1>Zero</h1>
-
             <h2>Bloodline</h2>
 
             <p>
@@ -714,34 +678,17 @@
             </p>
 
             <div class="hero-buttons">
-
-                <a href="#parents" class="btn">
-                    Meet The Parents
-                </a>
-
-                <a href="#available-zero" class="btn">
-                    View Available Dragons
-                </a>
-
+                <a href="#parents" class="btn">Meet The Parents</a>
+                <a href="#available-zero" class="btn">View Zero Offspring</a>
             </div>
-
         </div>
-
     </header>
 
-
-    <!-- =========================
-         FOUNDATION PARENTS
-    ========================= -->
+    <!-- FOUNDATION PARENTS -->
 
     <section class="foundation" id="parents">
-
         <div class="section-heading">
-
-            <div class="eyebrow">
-                Zero Foundation
-            </div>
-
+            <div class="eyebrow">Zero Foundation</div>
             <h2>The Parents</h2>
 
             <p>
@@ -749,102 +696,65 @@
                 two dragons selected to help build the next generation of
                 Dragons Of The North.
             </p>
-
         </div>
-
 
         <div class="parent-grid">
 
-            <!-- Minnie -->
-
             <div class="parent-card">
-
                 <div class="parent-image">
                     <img src="Minnie.jpg" alt="Minnie">
                 </div>
 
                 <div class="parent-info">
-
                     <h3>Minnie</h3>
-
-                    <div class="role">
-                        Foundation Female
-                    </div>
+                    <div class="role">Foundation Female</div>
 
                     <p>
                         One of the foundation females behind the Zero bloodline.
                         Minnie plays an important role in the future development
                         of this project.
                     </p>
-
                 </div>
-
             </div>
 
-
-            <!-- Mikey -->
-
             <div class="parent-card">
-
                 <div class="parent-image">
                     <img src="Mikey.jpg" alt="Mikey">
                 </div>
 
                 <div class="parent-info">
-
                     <h3>Mikey</h3>
-
-                    <div class="role">
-                        Foundation Male
-                    </div>
+                    <div class="role">Foundation Male</div>
 
                     <p>
                         The foundation male paired with Minnie to produce the
                         next generation of Zero offspring.
                     </p>
-
                 </div>
-
             </div>
 
         </div>
-
     </section>
 
-
-    <!-- =========================
-         AVAILABLE ZERO DRAGONS
-    ========================= -->
+    <!-- ZERO OFFSPRING / REHOMED DRAGONS -->
 
     <section class="available" id="available-zero">
-
         <div class="section-heading">
-
-            <div class="eyebrow">
-                Current Availability
-            </div>
-
-            <h2>Available Zero Dragons</h2>
+            <div class="eyebrow">Past Placements</div>
+            <h2>Zero Offspring</h2>
 
             <p>
-                A small selection of offspring currently available from
-                Dragons Of The North.
+                These dragons have found their new homes. Their photos remain
+                here as part of the Dragons Of The North breeding journey.
             </p>
-
         </div>
-
 
         <div class="zero-available-grid">
 
-
-            <!-- =====================
-                 PINK
-            ====================== -->
+            <!-- PINK -->
 
             <div class="mini-dragon-card">
-
                 <div class="mini-dragon-gallery">
-
                     <div class="mini-main-photo">
                         <img src="Pink1.jpg" alt="Pink Hypo Zero">
                     </div>
@@ -856,81 +766,39 @@
                     <div class="mini-side-photo">
                         <img src="Pink3.jpg" alt="Pink Hypo Zero Additional View">
                     </div>
-
                 </div>
-
 
                 <div class="mini-info">
-
                     <div class="mini-top">
-
                         <h3>Pink</h3>
-
-                        <div class="status">
-                            Available
-                        </div>
-
+                        <div class="status rehomed">Rehomed</div>
                     </div>
-
 
                     <div class="dragon-details">
-
                         <div class="detail">
-                            <span class="detail-label">
-                                Sex
-                            </span>
-
-                            <span class="detail-value">
-                                Unknown
-                            </span>
+                            <span class="detail-label">Sex</span>
+                            <span class="detail-value">Unknown</span>
                         </div>
 
-
                         <div class="detail">
-                            <span class="detail-label">
-                                Morph
-                            </span>
-
-                            <span class="detail-value">
-                                Hypo Zero
-                            </span>
+                            <span class="detail-label">Morph</span>
+                            <span class="detail-value">Hypo Zero</span>
                         </div>
 
-
                         <div class="detail">
-                            <span class="detail-label">
-                                DOB
-                            </span>
-
-                            <span class="detail-value">
-                                08/19/2026
-                            </span>
+                            <span class="detail-label">DOB</span>
+                            <span class="detail-value">08/19/2026</span>
                         </div>
-
                     </div>
 
-
-                    <a
-                        href="https://www.facebook.com/profile.php?id=61579598882265"
-                        target="_blank"
-                        class="message-btn"
-                    >
-                        Message Me For More Info
-                    </a>
-
+                    <div class="rehomed-note">Successfully Rehomed</div>
                 </div>
-
             </div>
 
-
-            <!-- =====================
-                 WHITE
-            ====================== -->
+            <!-- WHITE -->
 
             <div class="mini-dragon-card">
-
                 <div class="mini-dragon-gallery">
-
                     <div class="mini-main-photo">
                         <img src="White1.jpg" alt="White Hypo Zero">
                     </div>
@@ -942,92 +810,44 @@
                     <div class="mini-side-photo">
                         <img src="White3.jpg" alt="White Hypo Zero Additional View">
                     </div>
-
                 </div>
-
 
                 <div class="mini-info">
-
                     <div class="mini-top">
-
                         <h3>White</h3>
-
-                        <div class="status">
-                            Available
-                        </div>
-
+                        <div class="status rehomed">Rehomed</div>
                     </div>
-
 
                     <div class="dragon-details">
-
                         <div class="detail">
-                            <span class="detail-label">
-                                Sex
-                            </span>
-
-                            <span class="detail-value">
-                                Unknown
-                            </span>
+                            <span class="detail-label">Sex</span>
+                            <span class="detail-value">Unknown</span>
                         </div>
 
-
                         <div class="detail">
-                            <span class="detail-label">
-                                Morph
-                            </span>
-
-                            <span class="detail-value">
-                                Hypo Zero
-                            </span>
+                            <span class="detail-label">Morph</span>
+                            <span class="detail-value">Hypo Zero</span>
                         </div>
 
-
                         <div class="detail">
-                            <span class="detail-label">
-                                DOB
-                            </span>
-
-                            <span class="detail-value">
-                                08/19/2026
-                            </span>
+                            <span class="detail-label">DOB</span>
+                            <span class="detail-value">08/19/2026</span>
                         </div>
-
                     </div>
 
-
-                    <a
-                        href="https://www.facebook.com/profile.php?id=61579598882265"
-                        target="_blank"
-                        class="message-btn"
-                    >
-                        Message Me For More Info
-                    </a>
-
+                    <div class="rehomed-note">Successfully Rehomed</div>
                 </div>
-
             </div>
 
-
         </div>
-
     </section>
 
-
-    <!-- =========================
-         FUTURE PROJECT
-    ========================= -->
+    <!-- FUTURE PROJECT -->
 
     <section class="future">
-
         <div class="future-content">
-
             <div class="section-heading" style="margin-bottom: 0;">
-
-                <div class="eyebrow">
-                    The Road Ahead
-                </div>
-
+                <div class="eyebrow">The Road Ahead</div>
                 <h2>Future Generations</h2>
 
                 <p>
@@ -1036,48 +856,31 @@
                     while building a bloodline that can be carried forward
                     for generations.
                 </p>
-
             </div>
-
         </div>
-
     </section>
 
-
-    <!-- =========================
-         END SECTION
-    ========================= -->
+    <!-- END SECTION -->
 
     <section class="end-section">
-
         <div>
-
             <h2>Dragons Of The North</h2>
 
             <p>
                 Built with patience. Developed with purpose.
                 The journey continues.
             </p>
-
         </div>
-
     </section>
 
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
+    <!-- FOOTER -->
 
     <footer>
-
-        <p>
-            <strong>DRAGONS OF THE NORTH</strong>
-        </p>
+        <p><strong>DRAGONS OF THE NORTH</strong></p>
 
         <p style="margin-top: 8px;">
             Quality. Genetics. Legacy.
         </p>
-
     </footer>
 
 </body>
